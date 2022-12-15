@@ -1,0 +1,25 @@
+/* common style */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size:3rem;
+    background: #F2FFC2;/*F3DAAE*/
+    color: #3D4536;
+}
+
+.body-main-content{
+    min-height: 100vh;
+}
+
+.non-visible{
+    display: none;
+}   
+/* end of common style */
+

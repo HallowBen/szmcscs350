@@ -1,0 +1,57 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #034732;
+    align-items: center;
+    color: #8DB181;
+    padding: 4rem 3rem;
+}
+.fcitem-1{
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 30%;
+}
+.f-contact-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 30%;
+    font-size: 2.5rem;
+    font-weight: 300;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.f-c-list-item{
+    margin: .5rem 0;
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.up-reveal{
+    display: block;
+    position:fixed;
+    background-color: #fff;
+    right: 2rem;
+    bottom: 2rem;
+    padding: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.up-un-revealed{
+    display: none;
+}
+.up-arrow{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.6rem;
+}

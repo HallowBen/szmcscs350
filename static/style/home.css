@@ -1,0 +1,594 @@
+.nav-hidden{
+    animation: nav-hidden .2s normal forwards;
+}
+
+.nav-shown{
+    animation: nav-shown .8s normal forwards;
+}
+
+@keyframes nav-hidden {
+    0%{opacity: 100%;}
+    100%{opacity: 0; display: none;}
+}
+@keyframes nav-shown {
+    0%{opacity: 0%;display: none;}
+    100%{opacity: 100%; display: inline-block;}
+}
+
+
+.header-wrap{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(-6.5vh);
+    margin-bottom: -12vh;
+}
+
+.video{
+    filter: grayscale(50%);
+}
+
+.header-title{
+    z-index: 9;
+    font-size: 9rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: .5rem;
+    text-align: center;
+    width: 100vw;
+    position:absolute;
+    top: 15rem;
+    text-shadow:
+    -2px -2px 0 gold,
+    2px -2px 0 gold,
+    -2px 2px 0 gold,
+    2px 2px 0 gold,  
+    -3px 0 0 gold,
+    3px 0 0 gold,
+    0 3px 0 gold,
+    0 -3px 0 gold,
+    -1px -1px .7rem goldenrod,
+    1px -1px .7rem goldenrod,
+    -1px 1px .7rem goldenrod,
+    1px 1px .7rem goldenrod,  
+    -2px 0 .7rem goldenrod,
+    2px 0 .7rem goldenrod,
+    0 2px .7rem goldenrod,
+    0 -2px .7rem goldenrod;
+}
+
+.header-subtitle{
+    z-index: 9;
+    font-size: 8rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    text-align: center;
+    width: 100vw;
+    position:absolute;
+    top: 25rem;
+    text-shadow:
+    -2px -2px 0 gold,
+    2px -2px 0 gold,
+    -2px 2px 0 gold,
+    2px 2px 0 gold,  
+    -3px 0 0 gold,
+    3px 0 0 gold,
+    0 3px 0 gold,
+    0 -3px 0 gold,
+    -1px -1px .5rem goldenrod,
+    1px -1px .5rem goldenrod,
+    -1px 1px .5rem goldenrod,
+    1px 1px .5rem goldenrod,  
+    -2px 0 .5rem goldenrod,
+    2px 0 .5rem goldenrod,
+    0 2px .5rem goldenrod,
+    0 -2px .5rem goldenrod;
+}
+
+.hm-title{
+    margin-top: 2rem;
+    font-size: 6rem;
+    font-weight: 350w;
+    letter-spacing: .1rem;
+}
+
+/* ---------------------   home.html/ blog     ---------------------- */
+
+
+
+.blog-wrapper{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    padding: 0 4rem;
+}
+
+.blog-main-title{
+    text-shadow: 
+        .2rem .2rem 5rem #5AA9E6,
+        .3rem .3rem .5rem #376D49;
+    font-size: 4.8rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #3D4536;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 1rem .4rem 1rem;
+    box-sizing: border-box;
+}
+
+.beszamolo{
+    background-color: #3D4536;
+}
+
+.meghivo{
+    background-color: #977239;
+}
+
+.blog-footer{
+    color:#115522;
+    text-shadow: .1rem .1rem .1rem #fff520;
+    font-size: 3.3rem;
+    width:100%;
+    text-align: center;
+    padding: 1rem;
+    margin: .4rem 1rem 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.ossz{
+    background: #226622;
+    width: max-content;
+    padding: .2rem .5rem;
+    font-size: 2rem;  
+    border-radius: 1rem; 
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* owl carousel */
+
+.blog-bg{
+    width: 100%;    
+    padding: 5rem 0;
+}
+
+.owl{
+    width: 97%;
+    margin: 0 auto;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next{
+    position: absolute;
+    width: 4rem;
+    height: 4.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4rem !important;
+    background-color: #fff !important;
+    opacity: 85% !important;
+    color: #000 !important;
+    border-radius: 50rem !important;
+    box-shadow: .1rem .1rem .2rem #999 !important;
+}
+.owl-nav .owl-prev{left: -1.5%;}
+.owl-nav .owl-next{right: -1.5%;}
+
+.next-icon{
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+}
+.prev-icon{
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+}
+
+.element-tovabb{
+    opacity: 70%;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    background-color: #22559988;
+    margin-bottom: 2rem;
+    color: #fff;
+    width: max-content;
+    bottom: 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 2.7rem;
+}
+
+.element-tovabb:hover{
+    opacity: 90%;
+    cursor: pointer;
+    font-style: normal;
+}
+
+.element-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.owl-nav .owl-prev:hover, .owl-nav .owl-next:hover{
+    opacity: 90% !important;
+    box-shadow: .2rem .2rem .1rem #777 !important;
+
+}
+
+.element{
+    text-align: center;
+}
+.element-cim{
+    border-top: .2rem solid #555;
+    color: #DFEBC1;
+    padding: 1rem 0;
+    font-size: 4rem;
+    font-weight: 100;
+}
+/* .element-kep{
+    max-height: 30rem;
+    width:6rem;
+    height: auto;
+} */
+.element-bg-kep{
+    width: 100%;
+    height: 30rem;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+}
+/* owl carousel */
+
+/* kapcsolodó linkek */
+
+.kap_outer{
+    width: 100%;
+    background-color: #A3BEF5;
+    color: #034732;
+    font-size: 2rem;
+}
+.kap{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: 7rem auto;
+    padding: 5rem 0;
+}
+.kap_cim{
+    text-shadow: .2rem .2rem .1rem #A77A11, .2rem .2rem .5rem #FFC20A;
+    margin: 0 0 6rem;
+    font-size: 5rem;
+    font-weight: 600;
+}
+.kap_oldalak{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.kap_oldal{
+    background-color: #98B98D;
+    display: grid;
+    width: 40%;
+    box-sizing: border-box;
+    height: 25rem;
+    padding: 5% 0;
+    grid-template-columns: 30fr 70fr;
+    grid-template-rows: max-content max-content max-content;
+    margin: 4rem 0;
+}
+.oldal_kep{
+    width: 10rem;
+    height: auto;
+    margin: 0 auto;
+    grid-area: 1/1/4/2;
+}
+.oldalcim{
+    font-weight: 600;
+    padding: 0 0 2rem 1.5rem;
+}
+.oldalleiras{padding: 0 0 2rem;}
+
+.tov_oldal{
+    text-decoration: none;
+    color: #034732;
+}
+.tovabb_o_nyil{
+    font-size: 1.6rem;
+    transition: all .3s;
+}
+
+.tov_oldal:hover .tovabb_o_nyil{
+    padding-left: .5rem;
+}
+
+/* gallery news */
+.gallery{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    padding: 0 4rem;
+}
+
+.g-main-title{
+    text-shadow: 
+        .2rem .2rem 5rem #5AA9E6,
+        .3rem .3rem .5rem #376D49;
+    font-size: 4.8rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #3D4536;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 1rem .4rem 1rem;
+    box-sizing: border-box;
+}
+.g-footer{
+    color:#115522;
+    text-shadow: .1rem .1rem .1rem #fff520;
+    font-size: 3.3rem;
+    width:100%;
+    text-align: center;
+    padding: 1rem;
+    margin: .4rem 1rem 2rem 1rem;
+    box-sizing: border-box;
+}
+.ossz{
+    background: #226622;
+    width: max-content;
+    padding: .2rem .5rem;
+    font-size: 2rem;  
+    border-radius: 1rem; 
+    color: #fff;
+    cursor: pointer;
+}
+.g-bg{
+    width: 100%;    
+    padding: 5rem 0;
+}
+.g-element-tovabb{
+    opacity: 70%;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    background-color: #22559988;
+    margin-bottom: 2rem;
+    color: #fff;
+    width: max-content;
+    bottom: 0;
+    text-align: center;
+    font-style: italic;
+    font-size: 2.7rem;
+}
+.g-element-tovabb:hover{
+    opacity: 90%;
+    cursor: pointer;
+    font-style: normal;
+}
+.g-element-btn-container{
+    display: flex;
+    justify-content: center;
+}
+.g-element{
+    padding-top: 3rem;
+    text-align: center;
+    background-color: #EDFFAD;
+    border-radius: 3rem;
+}
+.g-element-cim{
+    color: #3D4536;
+    padding: 1rem 0 0 0;
+    font-size: 4rem;   
+}
+.g-element-frissitve{
+    color: #3D4536;
+    padding: 0 0 1rem 0;
+    font-size: 2rem;   
+}
+/* .g-element-kep{
+    max-height: 30rem;
+    overflow: hidden;
+    width:5rem;
+    margin-bottom: 1rem;
+    height: auto;
+} */
+.g-element-bg-kep{
+    margin: 0 auto;
+    background-size:contain;
+    width: 90%;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+}
+/* --------------   tag.html    -------------------- */
+
+
+
+.csp{
+    display: flex;
+    margin: 4rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.csph{
+    display: flex;
+    margin: 4rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rp{
+    display: flex;
+    margin: 4rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.st{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ov{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.szemely-kartya{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#226622;
+    width: max-content;
+    height: max-content;
+    padding: 3rem 0;
+    border: .3rem solid #888;
+    border-radius: 4rem;
+}
+
+.profilkep{
+    border-radius: 50%;
+    width: 50%;
+    height: auto;
+    border: .3rem solid #000;
+}
+.sz-s-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sz-s-2{
+    margin: 2rem 0;
+    border-radius: 1rem;
+    padding: .2rem;
+    color: #113322;
+    background-color:#34BFCA;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.nev{
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+.rank{
+    font-size: 2.3rem;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    width: max-content;
+}
+
+.sz-s-3{
+    background-color: #CCCC99;
+    padding: .4rem;
+    margin: 0 0 2rem 0;
+    color: #666;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beosztas{
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.rank-magyarazat{
+    opacity: 40%;
+    position: absolute;
+    display: none;
+    font-size: 2rem;
+    font-weight: 300;
+    width: max-content;
+    padding: 0.4rem 0.5rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.rank:hover .rank-magyarazat{
+    display: inline;
+}
+
+.rank-magyarazat-cst::before{ content:"cserkész tiszt"; }
+.rank-magyarazat-csst::before{ content:"cserkész segéd tiszt"; }
+.rank-magyarazat-őv::before{ content:"őrs vezető"; }
+
+.rank-magyarazat-cst{
+    right: -11.5rem;
+    top:-1rem;
+}
+.rank-magyarazat-csst{
+    right: -16.5rem;
+    top:-1rem;
+}
+.rank-magyarazat-őv{
+    right: -9.5rem;
+    top:-1rem;
+}
+
+.tag-title{
+    text-align: center;
+    font-size: 5rem;
+    padding: 5rem 0 2rem;
+    color: #fffb00;
+    text-shadow: .3rem .3rem 1.5rem #000;
+}
+
+/* esemeny naptar */
+.enaptar_kulon_kontener{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.encim{
+    width: max-content;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    font-size: 5rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    background-color: #11332277;
+    color: #fff520;
+    text-shadow: .2rem .2rem .1rem #000;
+}
+.enaptar_kulon{
+    width:80%;
+    height: 60vh;
+    margin: 5rem;
+    border: .4rem solid #777;
+    box-shadow: .2rem .2rem .3rem #000;
+}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="g_container">
+    <div class="g-cim">
+        <h1 class="gallery-title">Szent Márton cserkész csapat</h1><br>
+        <h2 class="gallery-subtitle">Galéria</h2><br>
+        <div class="gallery-links">Galéria/</div>
+    </div>
+    
+    <div class="g-themes">
+       {% for tema in temak %}
+    <div class="g_single_theme_container">   
+        <a href="{% url 'esemeny' tema.theme_key%}" class="g_theme_img_link g_theme_link">
+            <img src="{{tema.boritokep.url}}" class="{% if tema.boritokep.width > tema.boritokep.height %} g-theme-panorama {% else %} g-theme-profil {% endif %}">
+        </a>
+        <a href="{% url 'esemeny' tema.theme_key%}" class="g_theme_title_link g_theme_link">
+            <h1 class="g_theme_title">{{tema.temakor}}</h1>
+
+        </a>
+    </div>
+    {% endfor %} 
+    </div>
+    
+</div>
+{% endblock %}

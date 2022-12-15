@@ -1,0 +1,216 @@
+ navitem.forEach(el => {
+            el.addEventListener('mouseover', ()=>{
+                el.classList.add("nav-hover");
+                if (el.nextElementSibling !== null) {
+                if (el.nextElementSibling.classList.contains("sub-nav-container")) {
+                el.nextElementSibling.classList.add("sub-nav");
+                    el.nextElementSibling.classList.remove("non-visible"); 
+                }
+            }
+            }, false);
+        });
+        
+        navitem.forEach(el => {
+            el.addEventListener('mouseout', ()=>{
+                el.classList.remove("nav-hover");
+                if (el.nextElementSibling !== null) {
+                    if (el.nextElementSibling.classList.contains("sub-nav-container")) {
+                el.nextElementSibling.classList.remove("sub-nav");
+                el.nextElementSibling.classList.add("non-visible");
+                }
+                }
+                
+            }, false);
+        });
+        
+        
+        
+        subnavconainer.forEach(el => {
+            el.addEventListener('mouseover', ()=>{
+                el.previousElementSibling.classList.add("nav-hover");
+                el.classList.add("sub-nav");
+                el.classList.remove("non-visible")
+            }, false);
+        });
+        
+        subnavconainer.forEach(el => {
+            el.addEventListener('mouseout', ()=>{
+                el.previousElementSibling.classList.remove("nav-hover");
+                el.classList.remove("sub-nav");
+                el.classList.add("non-visible")
+            }, false);
+        });
+        
+        
+        
+        
+        subnavitem.forEach(el => {
+            el.addEventListener('mouseover', ()=>{
+                el.classList.add("nav-hover");
+            }, false);
+        });
+        
+        subnavitem.forEach(el => {
+            el.addEventListener('mouseout', ()=>{
+                el.classList.remove("nav-hover");
+            }, false);
+        });
+
+
+
+        ------------------------------------------------------------------------
+
+        
+         mobilenav.forEach(el => {
+            el.addEventListener("mouseover",()=>{
+                el.classList.add("mobile-hover")
+            })
+            el.addEventListener("mouseout",()=>{
+                el.classList.remove("mobile-hover")
+            })
+            el.addEventListener("click",()=>{
+                MainNavbar.classList.add("clicked")
+                el.classList.add("mobile-clicked")
+                mobile()
+            })
+        });
+        
+        function mobile(){
+            if(MainNavbar.classList.contains("clicked")){
+                navitemwrapper.forEach(el => {
+                    el.classList.remove("non-visible")
+                });
+   
+                navwrapper.forEach(el => {
+                    el.classList.remove("nav-wrapper")
+                    el.classList.add("mobile-nav-wrapper")
+                });
+
+                navbar.forEach(el => {
+                    el.classList.remove("nav-bar")
+                    el.classList.add("mobile-navbar")
+                });
+
+                navitem.forEach(el => {
+                    el.classList.remove("nav-item")
+                    el.classList.add("mobile-nav-item")
+                });
+
+                navitemwrapper.forEach(el => {
+                    el.classList.add("mobile-nav-item-wrapper")
+                });
+
+                mobilebtn.forEach(el => {
+                    if (el.classList.contains("mobile-close")) {
+                        el.classList.remove("non-visible")
+                    }
+                });
+
+                mobileclose.forEach(el => {
+                    el.addEventListener("click",()=>{
+                        MainNavbar.classList.remove("clicked")
+                        mobilenav.forEach(ele => {
+                            ele.classList.remove("mobile-clicked")
+                        })
+                        mobile()
+                    })
+                });
+
+                mobilenavdetail.forEach(el=>{
+                    el.addEventListener("mouseover",()=>{
+                        el.firstChild.classList.add("mobile-hover")
+                    
+                    })
+                    el.addEventListener("mouseout",()=>{
+                        el.firstChild.classList.remove("mobile-hover")
+                    
+                    })
+                    el.addEventListener("click",()=>{
+                        el.parentElement.classList.add("clicked")
+                        el.firstChild.classList.add("mobile-more")
+                        console.log(el.parentElement.classList)
+                    })
+                })
+            }
+
+            else{
+                navitemwrapper.forEach(el => {
+                    el.classList.add("non-visible")
+                });
+   
+                navwrapper.forEach(el => {
+                    el.classList.add("nav-wrapper")
+                    el.classList.remove("mobile-nav-wrapper")
+                });
+
+                navbar.forEach(el => {
+                    el.classList.add("nav-bar")
+                    el.classList.remove("mobile-navbar")
+                });
+
+                navitem.forEach(el => {
+                    el.classList.add("nav-item")
+                    el.classList.remove("mobile-nav-item")
+                });
+
+                navitemwrapper.forEach(el => {
+                    el.classList.add("nav-item-wrapper")
+                    el.classList.remove("mobile-nav-item-wrapper")
+                });
+
+                mobilebtn.forEach(el => {
+                    if (el.classList.contains("mobile-close")) {
+                        el.classList.add("non-visible")
+                    }
+                });
+            };
+
+        };
+
+
+
+
+        
+                // navitemwrapper.forEach(el => {
+                //     el.classList.add("non-visible")
+                // });
+   
+                // navwrapper.forEach(el => {
+                //     el.classList.add("nav-wrapper")
+                //     el.classList.remove("mobile-nav-wrapper")
+                // });
+
+                // navbar.forEach(el => {
+                //     el.classList.add("nav-bar")
+                //     el.classList.remove("mobile-navbar")
+                // });
+
+                // navitem.forEach(el => {
+                //     el.classList.add("nav-item")
+                //     el.classList.remove("mobile-nav-item")
+                // });
+
+                // navitemwrapper.forEach(el => {
+                //     el.classList.add("nav-item-wrapper")
+                //     el.classList.remove("mobile-nav-item-wrapper")
+                // });
+
+                // mobilebtn.forEach(el => {
+                //     if (el.classList.contains("mobile-close")) {
+                //         el.classList.add("non-visible")
+                //     }
+                // });
+                // subnavitem.forEach(el=>{
+                //     el.classList.remove("mobile-sub-nav-item")
+                //     el.classList.add("sub-nav-item")
+                // })
+                // subnavcontainer.forEach(el=>{
+                //     el.classList.add("non-visible")
+                //     el.classList.remove("mobile-sub-nav")
+                // })
+                // MainNavbar.classList.remove("more")
+                // $(mobilenavdetail).parent().removeClass("clicked")
+                // $(mobilenavdetail).children().removeClass("mobile-more")
+                // $(mobilenavdetail).children().addClass("mobile-less") 
+                // console.log($(mobilenavdetail).parent().attr("class").split(/\s+/))
+            

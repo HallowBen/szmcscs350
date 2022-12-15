@@ -1,0 +1,63 @@
+{%load static%}
+
+{% block statics %}
+<script src="{% static 'js/includes/navbar.js' %}" defer type="text/javascript"></script>
+<link rel="stylesheet" href="{% static 'style/navbar.css'%}">
+{% endblock statics %}
+
+<nav id="MainNavbar" class="navbar">
+    <div class="main-wrapper">
+        
+        <a class="nav-link" href="{% url 'home' %}"><img src="{% static 'img/icon.jpg' %}" class="nav-img" alt="Csapat icon"></a>
+    
+        <ul class="nav-wrapper">
+            <div class="mobile-btn mobile-close non-visible"><i class="fa-solid fa-xmark"></i></div>
+            <li class="nav-item-wrapper">
+                <div class="nav-item">Kezdőlap
+                    <div class="mobile-btn mobile-nav-detail non-visible"><i class="fa-solid fa-angle-down mobile-more-nav"></i></div>
+                </div>
+                <ul class="non-visible sub-nav-container">
+                    <li class="sub-nav-item nav-link" data-url="{% url 'home' %}">Bemutatkozás</li>
+                    <hr>
+                    <li class="sub-nav-item nav-link" data-url="{% url 'blog' %}">Blog</li>
+                    {% comment %} <hr>
+                    <li class="sub-nav-item nav-link" data-url="{% url 'esemeny_naptar' %}">Esemény naptár</li> {% endcomment %}
+                </ul>
+            </li>
+
+            <li class="nav-item-wrapper">
+                <div class="nav-item">Csapatról
+                    <div class="mobile-btn mobile-nav-detail non-visible"><i class="fa-solid fa-angle-down mobile-more-nav"></i></div>
+                </div>
+                <ul class="non-visible sub-nav-container">
+                    <li class="sub-nav-item nav-link" data-url="{% url 'tagok' %}">Felépítés</li>
+                    <hr>
+                    <li class="sub-nav-item nav-link" data-url="{% url 'csapat_tori' %}">Csapat történet</li>
+                    <hr>
+                    <li class="sub-nav-item nav-link" data-url="{% url 'cserkesz_tori' %}">Cserkészet története</li>
+                </ul>
+            </li>
+
+
+            <li class="nav-item-wrapper">
+                <div class="nav-item nav-link" data-url="{% url 'elerhetoseg' %}">Elérhetőség</div>
+            </li>     
+
+            <li class="nav-item-wrapper">
+                <div class="nav-item nav-link" data-url="{% url 'segedanyagok' %}">Segédanyagok</div>
+            </li>
+
+            <li class="nav-item-wrapper">
+                <div class="nav-item nav-link" data-url="{% url 'galeria' %}">Galéria</div>
+            </li>     
+            
+        </ul>
+    
+    </div>
+    
+    <ul id="SocialMedia" class="social-media">
+        <div class="mobile-btn mobile-nav non-visible"><i class="fa-solid fa-bars"></i></div>
+        <li id="Facebook" class="social-icon"><a aria-label="Facebook" class="social-icon" href="https://www.facebook.com/szmcscs350" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+        <li id="Instagram" class="social-icon"><a aria-label="Instagram" class="social-icon" href="https://www.instagram.com/350szmcscs/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+    </ul>
+</nav>

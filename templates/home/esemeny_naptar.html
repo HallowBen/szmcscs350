@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+    <link rel="stylesheet" href="{% static 'style/home.css'%}">
+{% endblock statics %}
+
+{%block content%}
+<div class="enaptar_kulon_kontener">
+    <div class="encim">A csapat eseményei</div>
+    <iframe class="enaptar_kulon" src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FBudapest&showTitle=1&showNav=1&showPrint=0&showTabs=0&showCalendars=0&src=cGg5N2h1Y3VxZHBlamxxdWo1ODNlNWtoZGNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D81B60" scrolling="no"></iframe>
+</div>
+{%endblock content%}

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>350.szmcscs | {{title}}</title>
+
+    <!-- Font awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--java scripts-->
+        <script src="{% static 'js/script.js' %}" defer type="text/javascript"></script>
+        
+        {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer type="text/javascript"></script>
+        <script src="{% static 'js/jquery.min.js' %}" defer type="text/javascript"></script> {% endcomment %}
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        {% comment %} <script src="{% static 'js/gallery/gallery.js' %}" defer type="text/javascript"></script>
+        <script src="{% static 'js/gallery/g_zoom.js' %}" defer type="text/javascript"></script> {% endcomment %}
+        
+    <!-- costume statics -->
+    {%block statics%}{%endblock%}
+    
+    <!--css files-->
+    <link rel="stylesheet" href="{% static 'style/gallery.css'%}">
+    <link rel="stylesheet" href="{% static 'style/style.css'%}">
+</head>
+<body id="HTMLBody" class="">
+<div class="body-main-content">
+    {% comment %} navbar {% endcomment %}
+    {% include 'include/navbar.html' %}
+    {% comment %} end of navbar {% endcomment %}
+
+
+    {% comment %} heading {% endcomment %}
+    {% block heading %}{% endblock %}
+    {% comment %} end of heading {% endcomment %}
+
+
+    {% comment %} content {% endcomment %}
+    {% block content %}{% endblock %}
+    {% comment %} end of content {% endcomment %}
+</div>
+
+    {% comment %} footer {% endcomment %}
+    {% include 'include/footer.html' %}
+    {% comment %} end of footer {% endcomment %}

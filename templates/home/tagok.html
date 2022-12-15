@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'style/home.css'%}">
+{% endblock statics %}
+
+
+{% block content %}
+<div class="tagok-main-container">
+
+<div class="tag-title"> A csapat vezetősége </div>
+
+<div class="csp">
+{% for tag in tagok%}
+{% if tag.beosztas == '1' %}
+<div class="szemely-kartya">
+    <div class="sz-s-1">
+    <img class="profilkep" src="{{tag.profilkep.kep.url}}">
+    </div>
+    <div class="sz-s-2">
+        <div class="nev">{{tag.nev}}</div>
+        <div class="rank">&nbsp;{{tag.get_kepesites_display}}.<span class="rank-magyarazat rank-magyarazat-{{tag.get_kepesites_display}}"></span></div>
+    </div>
+    <div class="sz-s-3">
+        <div class="beosztas">{{tag.get_beosztas_display}}</div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+
+<div class="csph">
+{% for tag in tagok%}
+{% if tag.beosztas == '2' %}
+<div class="szemely-kartya">
+    <div class="sz-s-1">
+    <img class="profilkep" src="{{tag.profilkep.kep.url}}">
+    </div>
+    <div class="sz-s-2">
+        <div class="nev">{{tag.nev}}</div>
+        <div class="rank">&nbsp;{{tag.get_kepesites_display}}.<span class="rank-magyarazat rank-magyarazat-{{tag.get_kepesites_display}}"></span></div>
+    </div>
+    <div class="sz-s-3">
+        <div class="beosztas">{{tag.get_beosztas_display}}</div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+
+<div class="rp">
+{% for tag in tagok%}
+{% if tag.beosztas == '3' %}
+<div class="szemely-kartya">
+    <div class="sz-s-1">
+    <img class="profilkep" src="{{tag.profilkep.kep.url}}">
+    </div>
+    <div class="sz-s-2">
+        <div class="nev">{{tag.nev}}</div>
+        <div class="rank" >&nbsp;{{tag.get_kepesites_display}}.<span class="rank-magyarazat rank-magyarazat-{{tag.get_kepesites_display}}"></span></div>
+    </div>
+    <div class="sz-s-3">
+        <div class="beosztas">{{tag.get_beosztas_display}}</div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+
+<div class="st">
+{% for tag in tagok%}
+{% if tag.beosztas == '4' %}
+<div class="szemely-kartya">
+    <div class="sz-s-1">
+    <img class="profilkep" src="{{tag.profilkep.kep.url}}">
+    </div>
+    <div class="sz-s-2">
+        <div class="nev">{{tag.nev}}</div>
+        <div class="rank">&nbsp;{{tag.get_kepesites_display}}.<span class="rank-magyarazat rank-magyarazat-{{tag.get_kepesites_display}}"></span></div>
+    </div>
+    <div class="sz-s-3">
+        <div class="beosztas">{{tag.get_beosztas_display}}</div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+
+<div class="ov">
+{% for tag in tagok%}
+{% if tag.beosztas == '5' %}
+<div class="szemely-kartya">
+    <div class="sz-s-1">
+    <img class="profilkep" src="{{tag.profilkep.kep.url}}">
+    </div>
+    <div class="sz-s-2">
+        <div class="nev">{{tag.nev}}</div>
+        <div class="rank">&nbsp;{{tag.get_kepesites_display}}.<span class="rank-magyarazat rank-magyarazat-{{tag.get_kepesites_display}}"></span></div>
+    </div>
+    <div class="sz-s-3">
+        <div class="beosztas">{{tag.get_beosztas_display}}</div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,4 @@
+
+    path('<str:pk_cim>/', views.next, name="next")
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

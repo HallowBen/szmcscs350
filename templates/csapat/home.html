@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'style/csapat.css'%}">
+<script src="{% static 'js/csapat/seged.js' %}" defer type="text/javascript"></script>
+{% endblock statics %}
+
+
+{% block content %}
+
+<table class="seged-main-container">
+    <thead>
+    <tr class="thead">
+        <td class="tipus-icon oszlop theadc">
+            Típus&nbsp;
+            <span id="file_tipus" class="order-by">
+                <i class="fa-solid fa-sort-up row1 inactive-order"></i>
+                <i class="fa-solid fa-sort-down row2 inactive-order"></i>
+            </span>
+        </td>
+        <td class="nev oszlop theadc">
+            Fájl neve&nbsp;
+            <span id="cim" class="order-by">
+                <i class="fa-solid fa-sort-up row1 inactive-order"></i>
+                <i class="fa-solid fa-sort-down row2 inactive-order"></i>
+            </span>
+        </td>
+        <td class="temkor oszlop theadc">
+            Témakör&nbsp;
+            <span id="tema" class="order-by">
+                <i class="fa-solid fa-sort-up row1 inactive-order"></i>
+                <i class="fa-solid fa-sort-down row2 inactive-order"></i>
+            </span>
+        </td>
+        <td class="feltoltes-datuma oszlop theadc">
+            Feltöltés dátuma&nbsp;
+            <span id="date" class="order-by">
+                <i class="fa-solid fa-sort-up row1 inactive-order"></i>
+                <i class="fa-solid fa-sort-down row2"></i>
+            </span>
+        </td>
+    </tr>
+    </thead>
+    <tbody id="SegedTable">
+
+    </tbody>
+
+</table>
+
+{% endblock content %}

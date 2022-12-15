@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'style/blog.css'%}">
+<script src="{% static 'js/home/blog.js' %}" defer type="text/javascript"></script>
+{% endblock statics %}
+
+{% block content %}
+
+<div id="BlogMain" class="blog-main">
+<div class="blog-main-title">A csapat blogja</div>
+<div id="BlogBody" class="blog-body">
+    <div class="blog-container beszamolo">
+        <div class="b-row br-first">
+            <div class="blog-title">Teszt</div>
+            <div class="esemeny-ideje">Esemény idje: 2022.05.25.</div>
+        </div>
+        <div class="b-row br-second">
+            <div class="b-photo-wrapper"><img src="{% static 'img/icon.jpg' %}"class="blog-photo"></div>
+            <div class="blog-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At dolorum eum illum. Corporis in incidunt quisquam obcaecati quia provident, nemo, sed, rem aliquam repellat cumque maxime assumenda iste ea aperiam.</div>
+        </div>
+        <div class="b-row br-third">
+            <div class="blog-writer">Feltöltötte: teszt</div>
+            <div class="blog-date">2022.06.29.</div>
+        </div>
+        <div class="tovabb direct" id="${el.id}">-- Tovább --</div>
+    </div>
+</div>
+
+</div>
+{% endblock content %}

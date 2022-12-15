@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block statics %}
+    <link rel="stylesheet" href="{% static 'style/elerhetoseg.css'%}"> 
+{% endblock statics %}
+
+
+{% block content %}
+<div class="e-container">
+    <img class="e-img" src="{% static 'img/csapat_egyszazalek.jpg' %}" alt="csapat egyszázalék">
+    <div class="cs-e-container">
+        <ul class="csapat">
+            <li class="c-cim">A csapat elérhetőségei</li>
+            <li class="cs-email"><div class="megnevezes">Email-cím:</div> <a class="email" href="mailto:szmcscs350@gmail.com">szmcscs350@gmail.com</a></li>
+            <li class="cs-helyszin">
+                <div class="cs-h-sz"><div class="megnevezes">Cím:</div> 9700, Szombathely, Szent Márton utca 40.</div>
+                <div class="cs-h-tc">
+                    <iframe title="Térkép" class="cs-h-t" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.161938035261!2d16.62893427670589!3d47.23297821370282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476eb9c67f95c88f%3A0xcfe8cd37b104021c!2sSzombathely%2C%20Szent%20M%C3%A1rton%20u.%2040%2C%209700!5e0!3m2!1shu!2shu!4v1669130383064!5m2!1shu!2shu"></iframe>
+                </div>
+            </li>
+        </ul>   
+
+        <ul class="egyesulet">
+            <li class="e-cim">A Csapat Egyesülete</li>
+            <li class="e-email"><div class="megnevezes">Email-cím:</div> <a class="email" href="mailto:nonrecuso.egyesulet@gmail.com">nonrecuso.egyesulet@gmail.com</a></li>
+            <li class="e-szszam"><div class="megnevezes">Számlaszám (OTP):</div> 11747006-27268061</li>
+            <li class="e-aszam"><div class="megnevezes">Adószám:</div> 18902268-1-18</li>
+        </ul>
+    </div>
+    
+</div>
+
+{% endblock content %}

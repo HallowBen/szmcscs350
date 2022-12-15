@@ -1,0 +1,38 @@
+, get_object_or_404
+from django.contrib import messages
+from .models import galleria
+import os
+
+
+def home(request):
+    paths= galleria.objects.all()
+    request.session['id']=0
+    # for pathoptions in gp:
+    #     paths=pathoptions
+    # mypath=paths
+    # img_list = os.listdir(mypath)
+    # id=0
+    # img_out=img_list[id]
+    # request.session['mypath']=mypath
+    # request.session['id']=id
+    return render(request, 'gallery.html', {'paths': paths})
+
+def next(request, pk_cim):
+
+    id=request.session.get('id')
+
+    if( id == 0 ):
+        path= get_object_or_404(galleria, cim = pk_cim)
+        mypath=path.eleresiut
+        
+    else:
+        mypath=request.session.get('mypath')
+    
+    
+    request.session['mypath']=mypath
+    img_list = os.listdir(mypath)
+    img_out=img_list[id]
+    id+=1
+    request.session['id']=id
+
+    return render(request, 'galléria.html', {'images':img_out, 'cim': str(pk_cim), "id":id-1})

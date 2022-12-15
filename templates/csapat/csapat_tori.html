@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+    <link rel="stylesheet" href="{% static 'style/csapat.css'%}">
+{% endblock statics %}
+
+
+{% block content %}
+
+<h1 class="cstcim">A csapat rövid története</h1>
+
+<div class="bekezd-1">
+    <div class="kep a_mi_tiz_evunk"><img class="a_mi_tiz_evunk_kep" src="{% static 'img/a_mi_tiz_evunk.jpg' %}" alt="A mi tíz évünk fedlapja"></div>
+    <div class="alcim"> A kezdetek 1928-tól </div>
+    <p class="kezdet-1b">
+        „Csapatunk a 48. Rákóczi Ferenc Cserkészcsapat védőszárnyai alatt alakult meg, mint annak kisraja 1925 szeptemberében... 
+        1928. január 10-én a Kerületi Intéző Bizottság jóváhagyásával megalakult az önálló szervezőtestület... 
+        Nyári nagytáboraink: 1926-ban Kenyeriben (10 napos), 1927-ben Répceszentgyörgyön (3 hetes), 1928-ban rajki erdőben (18 napos) és 1929-ben Szilvásváradon (20 napos). Minden alkalommal testvércsapatunk a 48. Rákóczi csapat táborában, de önálló rajműködéssel. 
+        A csapat jelenlegi létszáma: 34 fő, melyből 14 fiú kiscserkész, 20 pedig jelölt.” 
+        Ezen összeállítás a MI TÍZ ÉVÜNK 1920-1930. jubileumi emlékkönyvben található, Herold M. István írásában. Az emlékkönyvet dr. Szendy László apát-plébános szerkesztette. 
+        A cserkészcsapat 1946-ig az általános iskolai rendszer bevezetéséig működött.
+    </p> 
+</div>
+
+<div class="bekezd-2">
+    <div class="kep csapat_zaszlaja"><img class="csapat_zaszlaja_kep" src="{% static 'img/zaszlo.jpg' %}" alt="A csapat zászlaja"></div>
+    <div class="alcim"> Az újra alakulás </div>
+    <p class="kezdet-2b"> 
+        1989-ben a Szent Márton Plébánia káplánja Dóka Ferenc kezdeményezte a cserkészcsapat alakítását. A plébánia támogatta a kezdeményezést és a szervező káplán lett a csapat megbízott parancsnoka. A csapat nevét az egyházközség védőszentjétől vette és a korábbi kiscserkészcsapat utódjaként kezdte meg a működését. 
+        1989 novemberében tett a fiúkból álló csapat fogadalmat. Az első csapattábor 1990 nyarán, Nádasdon volt.
+        1991 ősze folyamán áthelyezés miatt parancsnokváltásra került sor. Bundics Antal cserkésztiszt lett a parancsnok.
+    </p>
+    <p class="kezdet-3b">
+        1993-ban Bundics Antalt szolgálata Rómába szólította. A csapat két segédtisztje sem tudott töretlen munkát végezni.
+        1993-ban a csapat élére Aigner Géza káplán került, aki még nem rendelkezett cserkészismeretekkel, illetve az őrsvezetők közül is többen iskolát váltottak, s nem tudtak cserkészmunkát végezni. 
+        Két évre volt szükség, hogy az új parancsnok Aigner Géza képesítést szerezzen, és hivatali elfoglaltsága mellett a cserkészettel megismerkedjen. 1994-től új jelöltek felvétele történt a csapathoz... 
+        1996-ban a Szent Márton Év keretében Velemben táborozott a cserkészcsapat másik két Szent Márton nevét viselő csapattal.
+    </p>
+    <p class="kezdet-4b">
+        1997-től újabb őrsvezetői képesítések megszerzésével tovább nőt a cserkészmunka minősége. 
+        1998-ban főiskolás korú fiatalok vezetésével új lendületet vett a cserkészcsapat munkája.
+    </p>
+</div>
+
+<div class="bekezd-3">
+    <div class="kep csapat_2022"><img class="csapat_2022_kep" src="{% static 'img/cserkesz_csapat.jpg' %}" alt="A csapat 2022-ben"></div>
+    <div class="alcim">Jelene</div>
+    <p class="jelen-b1">Ez a színvonalas munka, napjainkig is tart. Jelenleg a csapat létszáma {{data.oszletszam}} fő (papírforma szerint). Cserkésztiszt: {{data.vezetoseg.cst}} fő,
+        segédtiszt: {{data.vezetoseg.csst}} fő, őrsvezető: {{data.vezetoseg.ov}} fő. Jelenleg a csapatban {{data.osszors}} őrs van: </p>
+    <table class="jelen-orsok">
+        <tr class="ors ors-1">
+            <td class="nev">Őrs neve</td>
+            <td class="orvsvezeto">Őrs vezető</td>
+            <td class="letszam">Létszám</td>
+        </tr>
+        {% for obj in data.orsok %}
+            <tr class="ors">
+                <td class="nev">{{obj.orsnev}}</td>
+                <td class="orvsvezeto">{{obj.orsvezeto}}</td>
+                <td class="letszam">{{obj.letszam}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+ 	<p class="jelen-b2">
+        Csapat tagjai rendszeresen vettek részt a népdaléneklési versenyeken, tájékozódási versenyeken. A 2000-es évek elején több alkalommal indultak cserkészeink katasztrófavédelmi és elsősegélynyújtó versenyeken, melyeken kiemelkedő eredményeket értek el.
+    </p>
+</div>
+
+<div class="listak">
+
+    <div class="tabor-con">
+        <div class="taborok-cim">Táborok</div>
+        <ul class="taborok">
+            <li class="tabor">1997: Gersekarát</li>
+            <li class="tabor">1998: Gutorfölde</li>
+            <li class="tabor">1999: Szőce</li>
+            <li class="tabor">2000: Gutorfölde</li>
+            <li class="tabor">2001: Orosztony</li>
+            <li class="tabor">2002: Valkonya</li>
+            <li class="tabor">2003: Ráktanya</li>
+            <li class="tabor">2004: Gérce- Rózsáskerti erdészház</li>
+            <li class="tabor">2005: Zalaszentlászló</li>
+            <li class="tabor">2006: Oszkó</li>
+            <li class="tabor">2007: Rönök</li>
+            <li class="tabor">2008: Kistolmács</li>
+            <li class="tabor">2009: Velence</li>
+            <li class="tabor">2010: Orosztony</li>
+            <li class="tabor">2011: Kissomlyó</li>
+            <li class="tabor">2012: Pusztacsatár</li>
+            <li class="tabor">2013: Hosszúpereszteg</li>
+            <li class="tabor">2014: Kemenessömjén</li>
+            <li class="tabor">2015: Kőszegszerdahely</li>
+            <li class="tabor">2016: Szentgyörgyvölgy</li>
+            <li class="tabor">2017: Hegyfalu</li>
+            <li class="tabor">2018: Kismákfa</li>
+            <li class="tabor">2019: Kiscsehi-Budafapuszta</li>
+            <li class="tabor">2020: Balogunyom</li>
+            <li class="tabor">2021: Nyőgér</li>
+            <li class="tabor">2022: Bárkás-tó</li>
+        </ul>
+    </div>
+
+    <div class="cspk">
+        <div class="cspk-cim">Csapatparancsnokok</div>
+        <ul class="cspk-lista">
+            <li class="csp">Dóka Ferenc káplán 1989-1991</li>
+            <li class="csp">Bundics Antal 1992-1993</li>
+            <li class="csp">Aigner Géza káplán 1994-1998</li>
+            <li class="csp">Fülöp András 1999-2014</li>
+            <li class="csp">Bodorkós Gábor 2015-2018</li>
+            <li class="csp">Molnár Márk 2019-2021</li>
+            <li class="csp">Bodorkós Gábor: 2021-</li>
+        </ul>
+    </div>
+
+
+</div>
+{% endblock content %}

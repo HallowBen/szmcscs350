@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+<link rel="stylesheet" href="{% static 'style/home.css'%}">
+<script src="{% static 'js/home/home.js' %}" defer type="text/javascript"></script>
+
+<!-- owl carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock statics %}
+
+
+{% block heading %}
+    <div id="HeaderWrap" class="header-wrap">
+        <video width="100%" src="{{ video.video.url }}" type="video/mp4" height="100%" autoplay muted loop class="video" >
+        </video>  
+        <div class="header-title">350. Szent Márton</div>
+        <div class="header-subtitle">cserkész csapat</div>
+    </div>
+{% endblock heading %}
+
+
+
+{% block content %}
+<div class="home-main-contener">
+
+<div class="hm-title">Üdvözöllek a 350. Szent Márton cserkész csapat honlapján!</div>
+
+<div id="Hirek" class="blog-wrapper">
+    <div class="blog-main-title">Legfrissebb Híreink</div>
+        <div class="blog-bg">
+            <div class="owl">
+                <div id="OwlCarousel1" class="owl-carousel owl-loaded owl-theme">
+                    <div class="owl-stage-outer">
+                        <div id="OwlCarousel" class="owl-stage">
+                        </div>
+                    </div>
+                    <div class="owl-nav">
+                        <div class="owl-prev"><div class="prev-icon">🠸</div></div>
+                        <div class="owl-next"><div class="next-icon">🠺</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="blog-footer">További blogok: <button class="tovabb ossz" id="Ossz">-- Tovább --</button></div>
+</div>
+
+<div class="kap_outer">
+    <div class="kap">
+        <div class="kap_cim">Kapcsolódó oldalak</div>
+        <div class="kap_oldalak">
+            <div class="kap_oldal ko_1">
+                <img src="{% static 'img/mcssz.png' %}" class="oldal_kep"></img>
+                <div class="oldalcim">Magyar Cserkész szövetség</div>
+                <div class="oldalleiras">A magyar cserkész szövetség hivatalos weboldala!</div>
+                <a target="_blank" href="https://www.cserkesz.hu/" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+            </div>
+            <div class="kap_oldal ko_2">
+                <img src="{% static 'img/peldaulhu.png' %}" class="oldal_kep"></img>
+                <div class="oldalcim">Például.hu</div>
+                <div class="oldalleiras">Módszertani jatékok online tárháza!</div>
+                <a target="_blank" href="https://www.peldaul.hu/" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+            </div>
+            <div class="kap_oldal ko_3">
+                <img src="{% static 'img/scoutwiki.png' %}" class="oldal_kep"></img>
+                <div class="oldalcim">350. Szent Márton cserkészcsapat</div>
+                <div class="oldalleiras">A csapat hivatalos wikipédia oldala!</div>
+                <a target="_blank" href="https://wiki.cserkesz.hu/350._Szent_M%C3%A1rton_cserk%C3%A9szcsapat" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+            </div>
+            <div class="kap_oldal ko_4">
+                <img src="{% static 'img/3ker.png' %}" class="oldal_kep"></img>
+                <div class="oldalcim">III. Kerülete</div>
+                <div class="oldalleiras">A III. számu nyugat magyaroszági cserkész kerület hivatalos weboldala!</div>
+                <a target="_blank" href="https://3ker.cserkesz.hu/" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+            </div>        
+        </div>
+    </div>
+</div>
+
+<div class="gallery" id="Gallery">
+    <div class="g-main-title">Galéria Újdonságai</div>
+        <div class="g-bg">
+            <div class="g-owl">
+                <div id="OwlCarousel2" class="owl-carousel owl-loaded owl-theme">
+                    <div class="owl-stage-outer">
+                        <div id="OwlCarousel-2" class="owl-stage">
+                        </div>
+                    </div>
+                    <div class="owl-nav">
+                        <div class="owl-prev"><div class="prev-icon">🠸</div></div>
+                        <div class="owl-next"><div class="next-icon">🠺</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="g-footer">További képek: <button class="g-tovabb ossz" data-url="/galeria/">-- Tovább --</button></div>
+</div>
+
+
+{% endblock content %}
