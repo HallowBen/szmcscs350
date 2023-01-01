@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content %}
+<div class="g_container">
+    <div class="g-cim">
+        <h1 class="gallery-title">Szent Márton cserkészcsapat</h1><br>
+        <h2 class="gallery-subtitle">Galéria</h2><h3 class="gallery-subtitle2">{{tema.temakor}}</h3><br>
+        <div><a href="{% url 'galeria' %}">Galéria</a>/{{tema.temakor}}</div>
+    </div>
+    <div class="events_main">
+    {% for pont in esemenyek %}
+        <div class="event_container">
+            <a href="{% url 'kepek' tema.theme_key pont.esemeny_key %}" class="g_event_img_link">
+            {% with image=pont.photos_set.all|first %}
+                <img src="{{image.preview.url}}"  class="g_event_img" />  
+            {% endwith %}   
+        </a>
+        <a href="{% url 'kepek' tema.theme_key pont.esemeny_key %}" class="g_event_title_link">
+            <h1 class="g_event_title">{{pont.esemeny}}</h1>
+        </a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

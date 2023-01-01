@@ -17,7 +17,7 @@
         <video width="100%" src="{{ video.video.url }}" type="video/mp4" height="100%" autoplay muted loop class="video" >
         </video>  
         <div class="header-title">350. Szent Márton</div>
-        <div class="header-subtitle">cserkész csapat</div>
+        <div class="header-subtitle">cserkészcsapat</div>
     </div>
 {% endblock heading %}
 
@@ -26,10 +26,10 @@
 {% block content %}
 <div class="home-main-contener">
 
-<div class="hm-title">Üdvözöllek a 350. Szent Márton cserkész csapat honlapján!</div>
+<h1 class="olddal-cím h-olddal-cím">Üdvözöllek a 350. Szent Márton cserkészcsapat honlapján!</h1>
 
 <div id="Hirek" class="blog-wrapper">
-    <div class="blog-main-title">Legfrissebb Híreink</div>
+    <div class="oldal-alcím">Legfrissebb Híreink</div>
         <div class="blog-bg">
             <div class="owl">
                 <div id="OwlCarousel1" class="owl-carousel owl-loaded owl-theme">
@@ -48,40 +48,40 @@
     <div class="blog-footer">További blogok: <button class="tovabb ossz" id="Ossz">-- Tovább --</button></div>
 </div>
 
-<div class="kap_outer">
+<div class="kap_outer alternatív-háttér">
     <div class="kap">
-        <div class="kap_cim">Kapcsolódó oldalak</div>
+        <div class="oldal-alcím-alternatív">Kapcsolódó oldalak</div>
         <div class="kap_oldalak">
-            <div class="kap_oldal ko_1">
+            <div class="kap_oldal ko_1" data-url="https://www.cserkesz.hu/">
                 <img src="{% static 'img/mcssz.png' %}" class="oldal_kep"></img>
                 <div class="oldalcim">Magyar Cserkész szövetség</div>
                 <div class="oldalleiras">A magyar cserkész szövetség hivatalos weboldala!</div>
-                <a target="_blank" href="https://www.cserkesz.hu/" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+                <div class="tov_oldal links">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></div>
             </div>
-            <div class="kap_oldal ko_2">
+            <div class="kap_oldal ko_2" data-url="https://www.peldaul.hu/">
                 <img src="{% static 'img/peldaulhu.png' %}" class="oldal_kep"></img>
                 <div class="oldalcim">Például.hu</div>
                 <div class="oldalleiras">Módszertani jatékok online tárháza!</div>
-                <a target="_blank" href="https://www.peldaul.hu/" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+                <div class="tov_oldal links">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></div>
             </div>
-            <div class="kap_oldal ko_3">
+            <div class="kap_oldal ko_3" data-url="https://wiki.cserkesz.hu/350._Szent_M%C3%A1rton_cserk%C3%A9szcsapat">
                 <img src="{% static 'img/scoutwiki.png' %}" class="oldal_kep"></img>
                 <div class="oldalcim">350. Szent Márton cserkészcsapat</div>
                 <div class="oldalleiras">A csapat hivatalos wikipédia oldala!</div>
-                <a target="_blank" href="https://wiki.cserkesz.hu/350._Szent_M%C3%A1rton_cserk%C3%A9szcsapat" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+                <div class="tov_oldal links">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></div>
             </div>
-            <div class="kap_oldal ko_4">
+            <div class="kap_oldal ko_4" data-url="https://3ker.cserkesz.hu/">
                 <img src="{% static 'img/3ker.png' %}" class="oldal_kep"></img>
                 <div class="oldalcim">III. Kerülete</div>
                 <div class="oldalleiras">A III. számu nyugat magyaroszági cserkész kerület hivatalos weboldala!</div>
-                <a target="_blank" href="https://3ker.cserkesz.hu/" class="tov_oldal">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></a>
+                <div class="tov_oldal links">Tovább <i class="fa-solid fa-arrow-right tovabb_o_nyil"></i></div>
             </div>        
         </div>
     </div>
 </div>
 
 <div class="gallery" id="Gallery">
-    <div class="g-main-title">Galéria Újdonságai</div>
+    <div class="oldal-alcím">Galéria Újdonságai</div>
         <div class="g-bg">
             <div class="g-owl">
                 <div id="OwlCarousel2" class="owl-carousel owl-loaded owl-theme">

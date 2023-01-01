@@ -17,7 +17,7 @@ def home_blog(request):
     blogqs=Blog.objects.order_by('-date')[:5]
     blog=[]
     for obj in blogqs:
-        kepek=Photos.objects.filter(esemeny=obj.kepek).first().kepek.url
+        kepek=Photos.objects.filter(esemeny=obj.kepek).first().preview.url
         item={
             'id': obj.id,
             'nev': obj.posztolo_neve,
@@ -37,7 +37,7 @@ def gallery_home(request):
     esemenyqs=Esemeny.objects.exclude(theme_key=not_good).order_by('-update')[:5]
     esemeny=[]
     for obj in esemenyqs:
-        kepek=Photos.objects.filter(esemeny=obj.esemeny_key).first().kepek.url
+        kepek=Photos.objects.filter(esemeny=obj.esemeny_key).first().preview.url
         tema=str(obj.theme_key.theme_key)
         galeria_link="/galeria/"+tema+"/"+str(obj.esemeny_key)
         item={

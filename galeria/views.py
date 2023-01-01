@@ -44,6 +44,7 @@ def g_esemeny_kepek(request, tema_kulcs, esemeny_kulcs):
             'esemeny':obj.esemeny,
             'esemeny_key':obj.esemeny_key,
             'date':obj.date,
+            'update':obj.update.strftime("%Y.%m.%d %H:%M"),
             'esemeny_date':obj.esemeny_date,
             'kepszam': obj.kepszam,
         }
@@ -54,6 +55,7 @@ def g_esemeny_kepek(request, tema_kulcs, esemeny_kulcs):
         kepek={
             'id':obj.id,
             'esemeny': obj.esemeny,
+            'preview': obj.preview,
             'kepek': obj.kepek,
             'date':obj.date,
         }

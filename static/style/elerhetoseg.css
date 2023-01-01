@@ -3,6 +3,10 @@
     padding: 0;
     margin: 0;
 }
+
+.adat{
+    color: #000;
+}
 .e-img{
     width: 100%;
     height: auto;
@@ -34,4 +38,48 @@
 .email{
     color: #000;
     text-decoration: none;
+}
+@media (max-width:1200px) {
+    .c-cim, .e-cim{
+        font-size: 3.3rem;
+    }
+    .cs-email,.e-email,.cs-h-sz, .e-szszam, .e-aszam{
+        font-size: 2.8rem;
+    }
+}
+@media (max-width:1000px) {
+    .c-cim, .e-cim{
+        font-size: 3rem;
+    }
+    .cs-email,.e-email,.cs-h-sz, .e-szszam, .e-aszam{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:900px) {
+    .c-cim, .e-cim{
+        font-size: 3.5rem;
+    }
+    .cs-email,.e-email,.cs-h-sz, .e-szszam, .e-aszam{
+        font-size: 3rem;
+    }
+    .cs-e-container{
+        flex-direction: column;
+        width: 80%;
+    }
+    .csapat{
+        margin-bottom: 5rem;
+    }
+}
+@media (max-width:900px) {
+    .c-cim, .e-cim{
+        font-size: 3rem;
+    }
+    .cs-email,.e-email,.cs-h-sz, .e-szszam, .e-aszam{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:600px) {
+    .cs-e-container{
+        width: 90%;
+    }
 }

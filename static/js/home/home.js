@@ -50,11 +50,11 @@ function main(){
 
     $(tovabb).click(function(){
         if(String($(this).attr("id"))==="Ossz"){
-            window.location.assign(window.location.href+"blog")
+            window.location.assign(window.location.href+"hirek")
         }
         else{
                 localStorage.setItem("directid",$(this).attr("id"))
-                window.location.assign(window.location.href+"blog")
+                window.location.assign(window.location.href+"hirek")
         }
     })
     }
@@ -65,16 +65,18 @@ function main(){
             loop:true,
             margin: 30,
             autoplay:true,
-            nav: true,
+            nav: false,
             autoplayTimeout:4000,
             autoplayHoverPause:true,
             responsive:{
                 0:{
                     items:1,
                 },
-                600:{
+                650:{
+                    items:2,
+                },
+                750:{
                     items:3,
-                    
                 },
             }
             })
@@ -94,19 +96,19 @@ function hide() {
     const HeaderWrap = document.getElementById("HeaderWrap")
     var HWtop = HeaderWrap.getBoundingClientRect().top;
     var MNtop = MainNavbar.getBoundingClientRect().top;
-    var MNbottom = MainNavbar.getBoundingClientRect().bottom;
     var HWbottom = HeaderWrap.getBoundingClientRect().bottom;
     var HWcenter = (HWbottom+HWtop)/2
     var elementVisible2 = 100;
-    var elementVisible = 45
 
-    if ((HWtop <= MNbottom - elementVisible) && !(MNtop > HWcenter - elementVisible2)) {
+    if ((HWtop < 0) && !(MNtop > HWcenter - elementVisible2)) {
         MainNavbar.classList.remove("nav-shown")
         MainNavbar.classList.add("nav-hidden");
     }
     else{
+        if(MainNavbar.classList.contains("nav-hidden")){
         MainNavbar.classList.remove("nav-hidden");
         MainNavbar.classList.add("nav-shown")
+        }
     }
 }
 
@@ -126,6 +128,10 @@ $.ajax({
         }
         else{
             esemeny.forEach(el => {
+                esemeny_ido_szoveg="Frissítve: "
+                if(window.innerWidth<=1100){
+                    esemeny_ido_szoveg+="<br>"
+                }
 
                 esemenyideje = "g-esemeny-ideje"; if( el.esemeny_datuma === 0 ) { esemenyideje+=" non-visible"};
                 photo= "g-hg-photo";
@@ -133,7 +139,7 @@ $.ajax({
                 OwlCarousel2.innerHTML+=`<div class="owl-item g-element">
                     <div class="g-element-bg-kep" style="background-image: url('${el.kep}');"></div>
                     <div class="g-element-cim">${el.cim}</div>
-                    <div class="g-element-frissitve">Frissítve: ${el.date}</div>
+                    <div class="g-element-frissitve">${esemeny_ido_szoveg}${el.date}</div>
                     <div class="g-element-btn-container"><div data-url="${el.galleria}" class="g-element-tovabb g-tovabb">--Tovább--</div></div>
                 </div>`
             });
@@ -146,37 +152,80 @@ $.ajax({
     }
 
 })
- function owlcarousel2(){
-        var owl = $('#OwlCarousel2').owlCarousel({
-            loop:true,
-            margin: 30,
-            autoplay:true,
-            nav: true,
-            autoplayTimeout:4000,
-            autoplayHoverPause:true,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                600:{
-                    items:3,
-                },
-            }
-            })
-        
-            $('.owl-next').click(function() {
-            owl.trigger('next.owl.carousel');
+function owlcarousel2(){
+    var owl = $('#OwlCarousel2').owlCarousel({
+        loop:true,
+        margin: 30,
+        autoplay:true,
+        nav: false,
+        autoplayTimeout:4000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            650:{
+                items:2,
+            },
+            750:{
+                items:3,
+            },
+        }
         })
-        $('.owl-prev').click(function() {
-            owl.trigger('prev.owl.carousel');
-        })
-        main2();
+    
+        $('.owl-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.owl-prev').click(function() {
+        owl.trigger('prev.owl.carousel');
+    })
+    main2();
+}
+
+function main2(){
+    const gtovabb = [... document.getElementsByClassName("g-tovabb")]
+
+    $(gtovabb).click(function(){
+        window.location.assign(window.location.origin+$(this).attr("data-url"))
+    })
     }
 
-    function main2(){
-        const gtovabb = [... document.getElementsByClassName("g-tovabb")]
+    WidthRespons()
+    $(window).resize(WidthRespons)
+
+function WidthRespons(){
+    var KapTov=[...document.getElementsByClassName("tov_oldal")]
+    var KapOld=[...document.getElementsByClassName("kap_oldal")]
+    var OwlNav=[...document.getElementsByClassName("owl-nav")]
     
-        $(gtovabb).click(function(){
-            window.location.assign(window.location.origin+$(this).attr("data-url"))
+    if(window.innerWidth<650){
+        KapTov.forEach(el => {
+            el.classList.add("non-visible")
+            el.classList.remove("clickable")
+        });
+        KapOld.forEach(el => {
+            el.classList.add("clickable")
+        });
+        $(KapOld).click(function(){
+            window.open($(this).attr("data-url"))
         })
-        }
+        OwlNav.forEach(el => {
+            el.classList.add("non-visible")
+        });
+    }
+    else{
+        KapTov.forEach(el => {
+            el.classList.remove("non-visible")
+            el.classList.add("clickable")
+        });
+        KapOld.forEach(el => {
+            el.classList.remove("clickable")
+        });
+        $(KapTov).click(function(){
+            window.open($(this).parent().attr("data-url"))
+        })
+        OwlNav.forEach(el => {
+            el.classList.remove("non-visible")
+        });
+    }
+}

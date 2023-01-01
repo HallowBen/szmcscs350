@@ -7,7 +7,7 @@ const navbar = [...document.getElementsByClassName("navbar")]
 const navlink = [... document.getElementsByClassName("nav-link")]
 
 // mobile
-
+const MobileWidth= 1100
 const mobilebtn =[... document.getElementsByClassName("mobile-btn")]
 const mobilenav = [... document.getElementsByClassName("mobile-nav")]
 const mobileclose = [... document.getElementsByClassName("mobile-close")]
@@ -90,7 +90,7 @@ function mainnav(){
 
     // class reset end
 
-    if (screenwidth>=880) {
+    if (screenwidth>=MobileWidth) {
 
         navitemwrapper.forEach(el => {
             el.classList.remove("non-visible")
@@ -150,7 +150,7 @@ function mainnav(){
 
 // ----------------------------------------------------------------------------
 
-    if (screenwidth<880) {
+    if (screenwidth<MobileWidth) {
 
         // prev settings
 
@@ -305,6 +305,10 @@ function mainnav(){
                     })
                     $(subnavitem).mouseout(function(){
                         $(this).removeClass("nav-hover")
+                    })
+                    
+                    $(navlink).click(function(){
+                        window.location.assign(window.location.origin+$(this).attr("data-url"))
                     })
                 }
 

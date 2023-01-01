@@ -1,23 +1,26 @@
 {% extends 'base.html' %}
 {% load static%}
+{% block statics %}
+    <link rel="stylesheet" href="{% static 'style/gallery.css'%}">
+{% endblock statics %}
 
 {% block content %}
 <div class="g_container">
     <div class="g-cim">
-        <h1 class="gallery-title">Szent Márton cserkész csapat</h1><br>
+        <h1 class="gallery-title">Szent Márton cserkészcsapat</h1><br>
         <h2 class="gallery-subtitle">Galéria</h2><h3 class="gallery-subtitle2">{{tema.temakor}}</h3><br>
-        <div><a href="{% url 'galeria' %}">Galéria</a>/{{tema.temakor}}</div>
+        <div><a class="links" href="{% url 'galeria' %}">Galéria</a>/{{tema.temakor}}</div>
     </div>
-    <div class="events_main">
+    <div class="g-main">
     {% for pont in esemenyek %}
-        <div class="event_container">
-            <a href="{% url 'kepek' tema.theme_key pont.esemeny_key %}" class="g_event_img_link">
+        <div class="g_single">
+            <a href="{% url 'kepek' tema.theme_key pont.esemeny_key %}" class="g_link">
             {% with image=pont.photos_set.all|first %}
-                <img src="{{image.kepek.url}}"  class="g_event_img" />  
+                <div class="g-bg" style="background-image: url('{{image.preview.url}}');"></div>  
             {% endwith %}   
         </a>
-        <a href="{% url 'kepek' tema.theme_key pont.esemeny_key %}" class="g_event_title_link">
-            <h1 class="g_event_title">{{pont.esemeny}}</h1>
+        <a href="{% url 'kepek' tema.theme_key pont.esemeny_key %}" class="g_link">
+            <h1 class="g_title">{{pont.esemeny}}</h1>
         </a>
         </div>
     {% endfor %}

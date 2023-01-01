@@ -39,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    
+    'django.contrib.sitemaps',
+    'robots',
+    'imagekit',
     'captcha',
+
     'home',
     'galeria',
     'csapat',
@@ -143,9 +146,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-   'static',
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL='/media/'
 MEDIA_ROOT = Path(BASE_DIR, 'media')

@@ -1,0 +1,744 @@
+.vl{
+    border: 0.1rem solid #66666655;
+    content: "a";
+    height: 100%;
+}
+
+.seged-main-container{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sor{
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.1rem solid #555;
+    padding: 1rem .5rem;
+}
+
+.order-by{
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: .2rem .2rem;
+}
+
+.row1{
+    grid-area: 1/1/2/2;
+}
+.row2{
+    grid-area: 2/1/3/2;
+}
+
+
+.tipus-icon{
+    width: 4rem;
+    height: auto;
+}
+
+.oszlop{
+    flex-wrap: wrap;
+    display: flex;
+    text-align:center;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sor:nth-child(odd){
+    background-color: #aaaaaa88;
+}
+.sor:nth-child(even){
+    background-color: #88888877;
+}
+.thead{
+    background-color: #777;
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 0.1rem solid #555;
+    padding: 3rem .5rem;
+    }
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.oszlop:hover{
+    cursor: pointer;
+    color:#2164E8;
+}
+
+.theadc{
+    cursor: pointer;
+    display: flex;
+    line-height: .5rem;
+}
+.theadc:hover{
+    color: #fff;
+}
+
+.inactive-order{
+    opacity: 40%;
+}
+
+.st-hely-szov{
+    position: absolute;
+    top: 35%;
+    transform: translateY(50%);
+    right: 8%;
+    width: 80%;
+    text-align: center;
+}
+.smiley{
+    font-size: 6rem;
+}
+
+
+@media (max-width:1200px) {
+    .tbr{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 850px) {
+    .tbr{
+        font-size: 2rem;
+    }
+    .order-by{
+        font-size: 1rem;
+    }
+}
+@media (max-width:649px) {
+    .tipus-icon, .nev, .temkor, .feltoltes-datuma{
+        word-wrap: break-word;
+    }
+    .theadc{
+        line-height: 3rem;
+    }
+}
+
+/* csapat töri */
+
+.cstcim{
+    margin: 4rem auto 10rem;
+    width: max-content;
+    padding: 2rem;
+    border-radius: 4rem;
+    box-shadow: .3rem .4rem .5rem #000;
+    color: #fff;
+    background-color: #57a;
+}
+
+.bekezd-1{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    margin: 1rem;
+    grid-template-rows: max-content max-content;
+    padding: 3rem;
+    text-align: justify;
+    background-color: #aaa;
+    margin-bottom: 10rem;
+}
+
+.a_mi_tiz_evunk{
+    grid-area: 1/2/3/3;
+}
+.a_mi_tiz_evunk_kep{
+    margin: 2rem auto;
+    width: 50%;
+    height: auto;
+    box-shadow: .2rem .3rem .4rem #000;
+}
+
+.alcim{
+    margin-bottom: 2rem;
+    text-align: center;
+    grid-area: 1/1/2/3;
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: .1rem .1rem .3rem #777;
+    color: #0ff;
+
+}
+
+.kezdet-1b{
+    color: #fff;
+    grid-area: 2/1/3/2;
+}
+
+.bekezd-2{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: max-content max-content max-content max-content;
+    margin: 5rem;
+    margin-bottom: 20rem;
+    padding: 2rem;
+    background-color: #888;
+}
+
+.kep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.csapat_zaszlaja{
+    grid-area: 1/1/5/2;
+}
+.csapat_zaszlaja_kep{
+    width: 60%;
+    height: auto;
+    margin: 2rem auto;
+    box-shadow: .2rem .3rem .4rem #000;
+}
+
+.kezdet-2b{
+    color: #fff;
+    grid-area: 2/2/3/3;
+    text-align: left;
+    padding-bottom: 2rem;
+}
+.kezdet-3b{
+    color: #fff;
+    text-align: justify;
+    grid-area: 3/2/4/3;
+    padding-bottom: 2rem;
+}
+.kezdet-4b{
+    color: #fff;
+    text-align: left;
+    grid-area: 4/2/5/3;
+    padding-bottom: 2rem;
+}
+
+.bekezd-3{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: max-content max-content max-content max-content;
+    background-color: #585;
+    padding: 4rem;
+    margin: 2rem;
+    margin-bottom: 10rem;
+}
+.csapat_2022{
+    grid-area: 1/2/5/3;
+}
+
+.csapat_2022_kep{
+    width: 80%;
+    height: auto;
+    box-shadow: .2rem .3rem .4rem #000;
+}
+
+.jelen-b1{
+    color:#ffa500;
+    text-align: justify;
+    grid-area: 2/1/3/2;
+    margin-bottom: 1rem;
+}
+.jelen-orsok{
+    color:#ffa5aa;
+    grid-area: 3/1/4/2;
+    width: 70%;
+    text-align: center;
+    margin: 2rem auto;
+}
+.ors-1{
+    color: #000;
+    font-size: 3rem;
+    font-style: italic;
+}
+.ors{
+    padding: 1rem;
+    letter-spacing: .2rem;
+}
+
+.jelen-b2{
+    grid-area: 4/1/5/2;
+    color: #aaf;
+    text-align: justify;
+    margin-bottom: 3rem;
+}
+
+.listak{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: max-content;
+    background-color: #0df;
+    margin: 4rem;
+    padding: 3rem;
+    text-align: justify;
+}
+.tabor-con{
+    grid-area: 1/1/2/2;
+    font-size: 2rem;
+    font-style: italic;
+    color: #000;
+    text-shadow: .1rem .1rem .2rem #ffa500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: .3rem;
+    letter-spacing: .1rem;
+}
+.tabor{
+    padding-bottom: .3rem;
+    text-align: center;
+}
+
+.taborok-cim{
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+.taborok{
+    list-style: none;
+}
+
+.cspk{
+    grid-area: 1/2/2/3;
+    font-size: 3rem;
+    color: #555;
+    text-shadow: .1rem .1rem 1rem #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.cspk-cim{
+    font-size: 3.5rem;
+    text-shadow: .2rem .2rem .3rem #ffa;
+    padding-bottom: 3rem;
+}
+
+.cspk-lista{
+    list-style: none;
+}
+.csp{
+    padding: .2rem;
+}
+
+@media (max-width:1700px) {
+    .bekezd-1{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 80%;
+    }
+    .a_mi_tiz_evunk{
+        width: 30%;
+        margin: 0  auto;
+    }
+    .a_mi_tiz_evunk_kep{
+        width: 60%;
+        height: auto;
+    }
+    .alcim-1{
+        font-size: 6rem;
+    }
+    .alcim-2{
+        font-size: 6rem;
+    }
+    .alcim-3{
+        font-size: 6rem;
+    }
+    .alcim{
+        text-align: center;
+        grid-area: 1/1/2/3;
+    }
+    .kezdet-1b{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .bekezd-2{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        width: 90%;
+    }
+    
+    .csapat_zaszlaja{
+        width: 40%;
+        margin: 0  auto;
+    }
+    
+    .kezdet-2b{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .kezdet-3b{
+        width: 55%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .kezdet-4b{
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .bekezd-3{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem auto;
+        width: 85%;
+        
+    }
+    
+    .csapat_2022{
+        width: 60%;
+        margin: 0  auto;
+    }
+    
+    
+    .jelen-b1{
+        width: 60%;
+        margin: 1.5rem auto;
+        text-align: center;
+    }
+    
+    .jelen-orsok{
+        width: 60%;
+        margin: 1.5rem auto;
+        text-align: center;
+    }
+    
+    .jelen-b2{
+        width: 55%;
+        margin: 1.5rem auto;
+        text-align: justify;
+    }
+}
+@media (max-width:1200px) {
+    .alcim-1{
+        font-size: 4rem;
+    }
+    .alcim-2{
+        font-size: 4rem;
+    }
+    .alcim-3{
+        font-size: 4rem;
+    }
+    .kezdet-1b{
+        font-size: 2.5rem;
+    }
+    .kezdet-2b{
+        font-size: 2.5rem;
+    }
+    
+    .kezdet-3b{
+        font-size: 2.5rem;
+    }
+    
+    .kezdet-4b{
+        font-size: 2.5rem;
+    }
+    .jelen-b1{
+        font-size: 2.5rem;
+    }
+    .jelen-orsok{
+        font-size: 2.5rem;
+    }
+    .jelen-b2{
+        font-size: 2.5rem;
+    }
+    .listak{
+        display: flex;
+        flex-direction: column;
+        background-color: #0df;
+        margin: 4rem;
+        padding: 3rem;
+    }
+    .tabor-con{
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    .taborok-cim{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .cspk{
+        font-size: 3rem;
+    }
+    
+    .cspk-cim{
+        font-size: 3.5rem;
+    }
+    .cspk-lista{
+        list-style: none;
+    }
+    .csp{
+        padding: .2rem;
+    }
+}
+@media (max-width: 700px) {
+    .cstcim{
+        font-size: 4rem;
+    }
+
+    .a_mi_tiz_evunk{
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .csapat_zaszlaja{
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .csapat_2022{
+        width: 70%;
+        margin: 0  auto;
+    }
+    .cspk{
+        font-size: 2rem;
+    }
+    
+    .cspk-cim{
+        font-size: 3rem;
+    } 
+    .kezdet-1b{
+        font-size: 2rem;
+    }
+    .kezdet-2b{
+        font-size: 2rem;
+    }
+    
+    .kezdet-3b{
+        font-size: 2rem;
+    }
+    
+    .kezdet-4b{
+        font-size: 2rem;
+    }
+    .jelen-b1{
+        font-size: 2rem;
+    }
+    .jelen-orsok{
+        font-size: 1.8rem;
+        width: 100%;
+    }
+    .ors-1{
+        font-size: 2.3rem;
+    }
+    .jelen-b2{
+        font-size: 2rem;
+    }
+}
+@media (max-width: 500px) {
+    .cstcim{
+        font-size: 3.5rem;
+    }
+}
+/* cserkész töri */
+
+.cst-cim{
+    font-size: 4rem;
+    font-weight: 500;
+    color: #ffff00;
+    text-shadow: .2rem .2rem .2rem #222;
+}
+.cst-img-kontener{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cst-img{
+    box-shadow: .2rem .2rem .1rem #000, .6rem .6rem .3rem #555 ;
+}
+
+.cst-be-1{
+    display: flex;
+    flex-direction: column;
+    background-color: #185ADC;
+    margin: 4rem auto;
+    margin-bottom: 8rem;
+    border-radius: 3rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 85%;
+}
+.cst-be-1-torzs{
+    margin: 2rem 0;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 100fr;
+    grid-template-rows: max-content max-content;
+    grid-gap: 4rem;
+    text-align: justify;
+    color: #E9FF99;
+    height: max-content;
+}
+.cst-be-1-torzs-metszet{
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    grid-template-rows: max-content;
+}
+.cst-be-1-torzs-metszet-2{
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: 100fr;
+    grid-template-rows: 50fr 50fr;
+}
+.cst-be-1-torzs-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cst-be-1-img-1{
+    width: 70%;
+    height: auto;
+}
+.cst-be-1-img-2{
+    height: 100%;
+    width: auto;
+}
+.cst-be-1-torzs-b{
+    padding-top: 3rem;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.cst-be-2{
+    display: flex;
+    flex-direction: column;
+    background-color: #0df;
+    margin: 4rem auto;
+    margin-bottom: 8rem;
+    border-radius: 3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+.cst-be-2-torzs{
+    margin: 2rem 0;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 20fr 60fr 20fr;
+    grid-template-rows: max-content;
+    grid-gap: 1rem;
+    text-align: justify;
+    color: #3D4536;
+}
+.cst-be-2-torzs-a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cst-be-2-img-1{
+    width: 80%;
+    height: auto;
+}
+.cst-be-2-img-2{
+    height: auto;
+    width: 80%;
+}
+
+
+.cst-be-3{
+    display: flex;
+    flex-direction: column;
+    background-color: #0fa;
+    margin: 4rem auto;
+    margin-bottom: 8rem;
+    border-radius: 3rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+.cst-be-3-torzs{
+    margin: 2rem 0;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 20fr 60fr 20fr;
+    grid-template-rows: max-content;
+    grid-gap: 5rem;
+    text-align: justify;
+    color: #72f;
+}
+.cst-be-3-torzs-a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cst-be-3-img-1{
+    width: 80%;
+    height: auto;
+}
+.cst-be-3-img-2{
+    height: auto;
+    width: 80%;
+}
+@media(max-width:1400px) {
+    .cst-be-1-torzs-metszet{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .cst-be-1-img-1{
+        width: 100%;
+        margin-right: 2rem;
+        height: auto;
+    }   
+    .cst-be-1-img-2{
+        height: 100%;
+        width: auto;
+    }
+    .cst-be-1-torzs-metszet-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .cst-be-1-torzs-a{
+        width: 60%;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+    .cst-be-1-torzs-b{
+        padding-top: 0;
+        padding-bottom: 3.5rem;
+        margin-top: 0;
+        font-size: 2.4rem;
+    }
+    .cst-be-1{
+        margin-bottom: 5rem;
+        padding: 2rem 2rem 0;
+    }
+    .cst-be-1-torzs{
+        margin: 2rem 0 0;
+        padding: 4rem 4rem 0;
+    }
+    .cst-be-1-img-kontener-2{
+        height: 25rem;
+        width: max-content;
+    }
+}

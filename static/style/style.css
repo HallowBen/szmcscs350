@@ -10,7 +10,7 @@ html{
 }
 body{
     font-size:3rem;
-    background: #F2FFC2;/*F3DAAE*/
+    background: #AED6BB;/*F2FFC2;*//*F3DAAE*/
     color: #3D4536;
 }
 
@@ -21,5 +21,84 @@ body{
 .non-visible{
     display: none;
 }   
+.clickable{
+    cursor: pointer;
+}
+.links{
+    color:#134AB9;
+    text-decoration: none;
+}
+.olddal-cím{
+    font-size: 5rem;
+    text-align: center;
+    letter-spacing: .2rem;
+    text-shadow: 
+        .2rem .2rem .2rem #fff,
+        .2rem .2rem .6rem #A77A11;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.oldal-alcím{
+    text-shadow: 
+        .2rem .2rem 5rem #5AA9E6,
+        .3rem .3rem .5rem #376D49;
+    font-size: 4.8rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #3D4536;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 2rem 1rem .5rem 1rem;
+}
+.oldal-alcím-alternatív{
+    text-shadow: 
+        .2rem .2rem .1rem #A77A11,
+        .2rem .2rem .3rem #FFC20A;
+    font-size: 5rem;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem 0 2rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+}
+.alternatív-háttér{
+    background-color: #92C8A4;
+}
+
+@media (max-width:650px) {
+    .olddal-cím{
+        font-size: 4.5rem;
+    }
+    .oldal-alcím{
+        font-size: 4.2rem;
+    }
+    .oldal-alcím-alternatív{
+        font-size: 4.3rem;
+    }
+}
+@media (max-width:550px) {
+    .olddal-cím{
+        font-size: 4rem;
+    }
+    .oldal-alcím{
+        font-size: 3.7rem;
+    }
+    .oldal-alcím-alternatív{
+        font-size: 3.8rem;
+    }
+}
+@media (max-width:450px) {
+    .olddal-cím{
+        font-size: 3.8rem;
+    }
+    .oldal-alcím{
+        font-size: 3.4rem;
+    }
+    .oldal-alcím-alternatív{
+        font-size: 3.5rem;
+    }
+}
 /* end of common style */
 

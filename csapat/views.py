@@ -1,7 +1,7 @@
 import re
 from django.shortcuts import render
 
-from szmcscs350.settings import STATIC_URL, STATICFILES_DIRS
+from szmcscs350.settings import STATIC_URL
 from .models import Segedlet
 import os
 from django.conf import settings
@@ -61,9 +61,9 @@ def csptori(request):
     qstagok=Tagok.objects.all()
 
     for obj in qstagok:
-        if obj.kepesites==1: cstk+=1
-        elif obj.kepesites==2: csstk+=1
-        if obj.kepesites!=3: vezetoseg+=1
+        if obj.kepesites=="1": cstk+=1
+        elif obj.kepesites=="2": csstk+=1
+        if obj.kepesites!="3": vezetoseg+=1
     vov=""
     if Tagok.objects.filter(beosztas=1).first():
         vov=Tagok.objects.filter(beosztas=1).first().nev
@@ -76,15 +76,15 @@ def csptori(request):
     }
     orsok.append(item)
 
-    for obj in orsok:
-        osszletszam+=vezetoseg
+    osszletszam+=vezetoseg
 
 
     data={
         "orsok":orsok,
         "oszletszam":osszletszam,
-        "tagok":qstagok,
-        "vezetoseg":{"cst":cstk,"csst":csstk,"ov":ovk},
+        "cst":cstk,
+        "csst":csstk,
+        "ov":ovk,
         "osszors":oszors
     }
 

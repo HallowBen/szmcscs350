@@ -5,7 +5,7 @@ function reveal() {
     $("#Up").off()
 
     var windowHeight = $(document).height();
-    var height= footer.getBoundingClientRect().top;
+    var height= footer.getBoundingClientRect().bottom;
     var windowPrecent = 0.2;
 
     if (height<=windowHeight-(windowHeight*windowPrecent)) {

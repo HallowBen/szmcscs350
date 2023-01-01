@@ -18,7 +18,6 @@
 
 .header-wrap{
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
     width: 100vw;
     height: 100vh;
     transform: translateY(-6.5vh);
@@ -87,13 +86,6 @@
     0 -2px .5rem goldenrod;
 }
 
-.hm-title{
-    margin-top: 2rem;
-    font-size: 6rem;
-    font-weight: 350w;
-    letter-spacing: .1rem;
-}
-
 /* ---------------------   home.html/ blog     ---------------------- */
 
 
@@ -108,7 +100,7 @@
     padding: 0 4rem;
 }
 
-.blog-main-title{
+/* .blog-main-title{
     text-shadow: 
         .2rem .2rem 5rem #5AA9E6,
         .3rem .3rem .5rem #376D49;
@@ -121,14 +113,14 @@
     padding: 1rem;
     margin: 2rem 1rem .4rem 1rem;
     box-sizing: border-box;
-}
+} */
 
 .beszamolo{
-    background-color: #3D4536;
+    background-color: #305F3F;
 }
 
 .meghivo{
-    background-color: #977239;
+    background-color: #90B800;
 }
 
 .blog-footer{
@@ -233,11 +225,6 @@
     font-size: 4rem;
     font-weight: 100;
 }
-/* .element-kep{
-    max-height: 30rem;
-    width:6rem;
-    height: auto;
-} */
 .element-bg-kep{
     width: 100%;
     height: 30rem;
@@ -251,8 +238,6 @@
 /* kapcsolodó linkek */
 
 .kap_outer{
-    width: 100%;
-    background-color: #A3BEF5;
     color: #034732;
     font-size: 2rem;
 }
@@ -265,12 +250,12 @@
     margin: 7rem auto;
     padding: 5rem 0;
 }
-.kap_cim{
+/* .kap_cim{
     text-shadow: .2rem .2rem .1rem #A77A11, .2rem .2rem .5rem #FFC20A;
     margin: 0 0 6rem;
     font-size: 5rem;
     font-weight: 600;
-}
+} */
 .kap_oldalak{
     display: flex;
     flex-wrap: wrap;
@@ -278,7 +263,7 @@
     align-items:center;
 }
 .kap_oldal{
-    background-color: #98B98D;
+    background-color: #4FBA66;
     display: grid;
     width: 40%;
     box-sizing: border-box;
@@ -324,7 +309,7 @@
     padding: 0 4rem;
 }
 
-.g-main-title{
+/* .g-main-title{
     text-shadow: 
         .2rem .2rem 5rem #5AA9E6,
         .3rem .3rem .5rem #376D49;
@@ -337,7 +322,7 @@
     padding: 1rem;
     margin: 2rem 1rem .4rem 1rem;
     box-sizing: border-box;
-}
+} */
 .g-footer{
     color:#115522;
     text-shadow: .1rem .1rem .1rem #fff520;
@@ -347,15 +332,6 @@
     padding: 1rem;
     margin: .4rem 1rem 2rem 1rem;
     box-sizing: border-box;
-}
-.ossz{
-    background: #226622;
-    width: max-content;
-    padding: .2rem .5rem;
-    font-size: 2rem;  
-    border-radius: 1rem; 
-    color: #fff;
-    cursor: pointer;
 }
 .g-bg{
     width: 100%;    
@@ -386,26 +362,19 @@
 .g-element{
     padding-top: 3rem;
     text-align: center;
-    background-color: #EDFFAD;
-    border-radius: 3rem;
+    background-color: #4FBA66;
 }
 .g-element-cim{
+    font-size: 4rem;
     color: #3D4536;
+    text-shadow: .2rem .2rem .5rem #fff;
     padding: 1rem 0 0 0;
-    font-size: 4rem;   
 }
 .g-element-frissitve{
     color: #3D4536;
     padding: 0 0 1rem 0;
     font-size: 2rem;   
 }
-/* .g-element-kep{
-    max-height: 30rem;
-    overflow: hidden;
-    width:5rem;
-    margin-bottom: 1rem;
-    height: auto;
-} */
 .g-element-bg-kep{
     margin: 0 auto;
     background-size:contain;
@@ -415,6 +384,269 @@
     background-position: center;
     background-attachment:fixed;
 }
+
+
+@media (max-width:1900px) {
+    .header-wrap{
+        margin-top: 1rem;
+        transform: translateY(-7vh);
+        margin-bottom: -6vh;
+    }
+}
+@media (max-width:1870px) {
+    .header-wrap{
+        margin-top: 1rem;
+        transform: translateY(-7.5vh);
+        margin-bottom: -6vh;
+    }
+}
+@media (max-width:1840px) {
+    .header-wrap{
+        margin-top: 1rem;
+        transform: translateY(-8vh);
+        margin-bottom: -6vh;
+    }
+}
+@media (max-width:1800px) {
+    .header-wrap{
+        margin-top: .5rem;
+        transform: translateY(-8.5vh);
+        margin-bottom: -6vh;
+    }
+}
+@media (max-width:1750px) {
+    .header-wrap{
+        transform: translateY(-9vh);
+        margin-bottom: 0;
+        height: max-content;
+    }
+}
+@media (max-width:1730px) {
+    .header-wrap{
+        margin-top: .5rem;
+        transform: translateY(-.4vh);
+    }
+}
+@media (max-width:1200px) {
+    .header-title{
+        font-size: 8rem;
+        top: 10%;
+    }
+    .header-subtitle{
+        font-size: 7rem;
+        top: 30%;
+    }
+    .oldal_kep{
+        width: 8rem;
+        height: auto;
+        margin: 0 auto;
+        grid-area: 1/1/4/2;
+    }
+}
+@media (max-width:1100px) {
+    .element-cim{
+        font-size: 3rem;
+    }
+    .g-element-cim{
+        font-size: 3rem;   
+    }
+    .element-tovabb{
+        font-size: 2.2rem;
+    }
+    .g-element-tovabb{
+        font-size: 2.2rem;
+    }
+    .owl-nav .owl-prev, .owl-nav .owl-next{
+        position: absolute;
+        width: 3rem;
+        height: 3.5rem;
+        top: 60%;
+        transform: translateY(-50%);
+        font-size: 3.6rem !important;
+    }
+    .next-icon{
+        position: absolute;
+        top: -.4rem;
+        right: 1.1rem;
+    }
+    .prev-icon{
+        position: absolute;
+        top: -.4rem;
+        left: 1.1rem;
+    }
+    .element-bg-kep{
+        width: 100%;
+        height: 20rem;
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment:fixed;
+    }
+    .g-element-bg-kep{
+        margin: 0 auto;
+        background-size:contain;
+        width: 90%;
+        height: 20rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment:fixed;
+    }
+}
+@media (max-width:1000px) {
+    .header-title{
+        font-size: 6rem;
+        text-shadow:
+            -1px -1px 0 gold,
+            1px -1px 0 gold,
+            -1px 1px 0 gold,
+            1px 1px 0 gold,  
+            -2px 0 0 gold,
+            2px 0 0 gold,
+            0 2px 0 gold,
+            0 -2px 0 gold,
+            -.5px -.5px .2rem goldenrod,
+            .5px -.5px .2rem goldenrod,
+            -.5px .5px .2rem goldenrod,
+            .5px .5px .2rem goldenrod,  
+            -1px 0 .2rem goldenrod,
+            1px 0 .2rem goldenrod,
+            0 1px .2rem goldenrod,
+            0 -1px .2rem goldenrod;
+    }
+    .header-subtitle{
+        font-size: 5rem;
+        text-shadow:
+            -1px -1px 0 gold,
+            1px -1px 0 gold,
+            -1px 1px 0 gold,
+            1px 1px 0 gold,  
+            -2px 0 0 gold,
+            2px 0 0 gold,
+            0 2px 0 gold,
+            0 -2px 0 gold,
+            -.5px -.5px .2rem goldenrod,
+            .5px -.5px .2rem goldenrod,
+            -.5px .5px .2rem goldenrod,
+            .5px .5px .2rem goldenrod,  
+            -1px 0 .2rem goldenrod,
+            1px 0 .2rem goldenrod,
+            0 1px .2rem goldenrod,
+            0 -1px .2rem goldenrod;
+    }
+    .kap_oldalak{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items:center;
+    }
+    .kap_oldal{
+        width: 70%;
+        height: 20rem;
+    }
+}
+
+@media (max-width:800px) {
+    .element-cim{
+        font-size: 2.5rem;
+    }
+    .element-tovabb{
+        font-size: 2rem;
+    }
+    .g-element-cim{
+        font-size: 2.5rem;   
+    }
+    .g-element-tovabb{
+        font-size: 2rem;
+    }
+    .g-element-frissitve{
+        color: #3D4536;
+        padding: 0 0 1rem 0;
+        font-size: 1.5rem;   
+    }
+}
+
+@media (max-width:700px) {
+    .blog-main-title{
+        font-size: 3.8rem;
+    }
+    .kap_cim{
+        font-size: 3.8rem;
+    }
+    .g-main-title{
+        font-size: 3.8rem;
+    }
+}
+@media (max-width:650px) {
+    .h-olddal-cím{
+        font-size: 3.5rem !important;
+    }
+    .header-title{
+        font-size: 5rem;
+    }
+    .header-subtitle{
+        font-size: 4rem;   
+    }
+    .blog-footer{
+        font-size: 2.8rem;
+    }
+    .g-footer{
+        font-size: 2.8rem;
+    }
+    .ossz{
+        font-size: 1.85rem;
+    }
+    .blog-wrapper{
+        max-width: 60%;
+    }
+    .gallery{
+        max-width: 60%;
+    }
+    .kap_oldal{
+        display: flex;
+        width: 70%;
+        text-align: center;
+        height: 30rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 1rem;
+    }
+    .oldal_kep{
+        margin: 0 auto 2rem;
+    }
+}
+@media (max-width:500px) {
+    .h-olddal-cím{
+        font-size: 2.8rem !important;
+    }
+    .header-title{
+        font-size: 4rem;
+    }
+    .header-subtitle{
+        font-size: 3rem;
+        top: 40%;
+    }
+    .blog-main-title{
+        font-size: 3rem;
+    }
+    .kap_cim{
+        font-size: 3rem;
+    }
+    .g-main-title{
+        font-size: 3rem;
+    }
+}
+@media(max-width:400px) {
+    .header-title{
+        font-size: 3.5rem;
+    }
+    .header-subtitle{
+        font-size: 3rem;
+        top: 40%;
+    }
+}
+
 /* --------------   tag.html    -------------------- */
 
 
@@ -564,6 +796,21 @@
     padding: 5rem 0 2rem;
     color: #fffb00;
     text-shadow: .3rem .3rem 1.5rem #000;
+}
+
+@media (max-width:700px) {
+    .rank-magyarazat-cst{
+        right: -3rem;
+        top: 2.8rem;
+    }
+    .rank-magyarazat-csst{
+        right: -2.2rem;
+        top: 2.8rem;
+    }
+    .rank-magyarazat-őv{
+        right: -2.2rem;
+        top: 2.8rem;
+    }
 }
 
 /* esemeny naptar */

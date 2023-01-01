@@ -1,4 +1,3 @@
-from msilib.schema import Media
 from django.contrib import admin
 from django.urls import path, include
 from csapat import views

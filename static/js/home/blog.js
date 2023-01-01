@@ -21,7 +21,10 @@ $.ajax({
         blog.forEach(el => {
             let substring = el.poszt;
             substring=substring.trimToLength(80);
-
+            esemeny_ido_szoveg="Esemény idje: "
+                if(window.innerWidth<=700){
+                    esemeny_ido_szoveg+="<br>"
+                }
             esemenyideje = "esemeny-ideje"; if( el.esemeny_datuma === 0 ) { esemenyideje+=" non-visible"};
             blogtipus = "blog-container"; if(el.blog_tipus===`be`){blogtipus+=` beszamolo`} else{blogtipus += ` meghivo`};
             photo= "blog-photo"; if( el.kep === 0 ) { photo+=" non-visible"};
@@ -31,7 +34,7 @@ $.ajax({
             <div id="${el.id}" class="${blogtipus}">
                 <div id="${aligneid}" class="b-row br-first">
                     <div class="blog-title">${el.cim}</div>
-                    <div class="${esemenyideje}">Esemény idje: ${el.esemeny_datuma}</div>
+                    <div class="${esemenyideje}">${esemeny_ido_szoveg}${el.esemeny_datuma}</div>
                 </div>
                 <div class="b-row br-second">
                     <div class="b-photo-wrapper"><img src="${el.kep[0]}"class="${photo}"></div>

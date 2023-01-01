@@ -7,73 +7,116 @@
 
 {%block content%}
 
-<div class="cst-be-1">
-    <div class="cst-cim">Megalakulás</div>
-    <div class="cst-be-1-torzs">
+<h1 class="olddal-cím">A cserkészet rövid története</h1>
 
-        <div class="cst-be-1-torzs-metszet">
-            <div class="cst-img-kontener">
-                <img src="{% static 'img/bi_pi.jpg' %}" alt="Bi-Pi" class="cst-img cst-be-1-img-1">
-            </div>
-            <div class="cst-be-1-torzs-a">
-                A cserkészet alapítója Lord Robert Stephenson Smyth Baden-Powell of Gilwell (B-P, Bi-Pi),
-                aki katona tisztként szolgált a britt hadseregben a birodalom különböző gyarmatain,
-                főként India és Afrika területén. A szolgálati ideje alatt összegyüjtött tapasztalatait
-                használta fel később a fiataloknak szóló könyve (Scouting for Boys) megírásához.
-                Bi-Pi Mafeking ostroma közben lett figyelmes az ott szolgáló fiatalok ügyességére és találékonyságára,
-                úgy vélte, hogy a városi fiatalok is tudnának hasonló találékonyságra és értékes munkára, ha felelősséget kapnának. 
-            </div>
+<div class="három-hasáb">
+    <div class="h-közép">
+        <div class="oldal-alcím">Megalakulás</div>
+        <div class="szoveg">
+            A cserkészet alapítója Lord Robert Stephenson Smyth Baden-Powell of Gilwell (B-P, Bi-Pi),
+            aki katona tisztként szolgált a britt hadseregben a birodalom különböző gyarmatain,
+            főként India és Afrika területén. A szolgálati ideje alatt összegyüjtött tapasztalatait
+            használta fel később a fiataloknak szóló könyve (Scouting for Boys) megírásához.
+            Bi-Pi Mafeking ostroma közben lett figyelmes az ott szolgáló fiatalok ügyességére és találékonyságára,
+            úgy vélte, hogy a városi fiatalok is tudnának hasonló találékonyságra és értékes munkára, ha felelősséget kapnának.
         </div>
-        <div class="cst-be-1-torzs-metszet-2">
-            <div class="cst-img-kontener">
-                <img src="{% static 'img/first_scoutcamp.gif' %}" alt="1. cserkész tábor" class="cst-img cst-be-1-img-2">
-            </div>
-            <div class="cst-be-1-torzs-b">
-                Az anya országa visszatérve, 1907-ben tábort szervezett kamasz fiúknak az angliai Brownsea szigetén, hogy ezen elméletét gyakorlatban is tesztelje.
-                A ítábor folyamán a fiatalok kisebb csoprtokra (őrsökre) voltak osztva, amikben az elit iskolák diákjai együtt voltak jelen a szegényebb sorban élő társaikkal.
-                Közösen vettek részt a különböző sport eseményeken és turákon, mindvégig egyenruhában, ami elfedte a társadalmi különbségeket. 
-                A tábornak igen csak nagy sikere lett, ami következtében tanácsolta az "őrsi" rendszer bevezetését.
-                Ebben a rendszerben 4-5 fő alkot egy őrsöt, ahol a legidőseb az őrsvezető, aki felelős az egész őrse viselkedéséért.
-            </div>
+        <div class="szoveg">
+            Az anya országa visszatérve, 1907-ben tábort szervezett kamasz fiúknak az angliai Brownsea szigetén, hogy ezen elméletét gyakorlatban is tesztelje.
+            A ítábor folyamán a fiatalok kisebb csoprtokra (őrsökre) voltak osztva, amikben az elit iskolák diákjai együtt voltak jelen a szegényebb sorban élő társaikkal.
+            Közösen vettek részt a különböző sport eseményeken és turákon, mindvégig egyenruhában, ami elfedte a társadalmi különbségeket. 
+            A tábornak igen csak nagy sikere lett, ami következtében tanácsolta az "őrsi" rendszer bevezetését.
+            Ebben a rendszerben 4-5 fő alkot egy őrsöt, ahol a legidőseb az őrsvezető, aki felelős az egész őrse viselkedéséért.
+        </div>
+    </div>
+        
+    <div class="kép_és_aláírás bal_kep">
+        <img src="{% static 'img/bi_pi.jpg' %}" alt="Bi-Pi" class="kep">
+        <div class="kép-aláírás">&#8222;Bi-pi<br>(cserkészet atyja)&#8223;</div>
+    </div>
+    <div class="kép_és_aláírás jobb_kep">
+        <img src="{% static 'img/first_scoutcamp.gif' %}" alt="1. cserkész tábor" class="kep">
+        <div class="kép-aláírás">&#8222;Brownsea-szigeteki cserkésztábor&#8223;</div>
+    </div>
+
+    <div class="bal_jobb">
+        <div class="kép_és_aláírás">
+            <img src="{% static 'img/bi_pi.jpg' %}" alt="Bi-Pi" class="kep cstöri">
+            <div class="kép-aláírás cstöri">&#8222;Bi-pi<br>(cserkészet atyja)&#8223;</div>
+        </div>
+        <div class="kép_és_aláírás">
+            <img src="{% static 'img/first_scoutcamp.gif' %}" alt="1. cserkész tábor" class="kep cstöri">
+            <div class="kép-aláírás cstöri">&#8222;Brownsea-szigeteki cserkésztábor&#8223;</div>
         </div>
     </div>
 </div>
-<div class="cst-be-2">
-    <div class="cst-cim">Cserkészet fiúknak</div>
-    <div class="cst-be-2-torzs">
-        <div class="cst-img-kontener">
-            <img src="{% static 'img/scouting_for_boys.jpg' %}" alt="Scouting for Boys" class="cst-img cst-be-2-img-1">
-        </div>
-        <div class="cst-be-2-torzs-a">
+
+<div class="három-hasáb alternatív-háttér">
+    <div class="h-közép">
+        <div class="oldal-alcím-alternatív">Cserkészet fiúknak</div>
+        <div class="szoveg">
             A tábor sikerét és a ott szerzett tapasztait öszefoglaló könyve a Scouting for Boys népszerüségét követően a cserkészet 
             rendkivüli sebességel terjedt el elösször a szigetország területén, majd az egész világon. Katonai viszavonulása után Bi-Pi 
             minden idejét és erejét a cserkészetnek szentelte. Számos országot beutazott, s hirdette a cserkészetet és annak eszményeit. 
             Utazási során egyaránt buzdította a fiatlokat és a veztetőket ezek követésére. Bi-Pi utolsó éveit visszavonultan Nyeriben, Kenyában töltötte 
-            1941. január 8-án bekövetkezett haláláig.
+            1941. január 8-án bekövetkezett haláláig.ó
         </div>
-        <div class="cst-img-kontener">
-            <img src="{% static 'img/bi_pi_tombstone.jpg' %}" alt="Bi-Pi sírja Kenyában" class="cst-img cst-be-2-img-2">
+    </div>
+
+    <div class="kép_és_aláírás bal_kep">
+        <img src="{% static 'img/Scouting_for_boys.jpg' %}" alt="Scouting for Boys" class="kep">
+        <div class="kép-aláírás">&#8222;A cserkészet fiúknak c. könyv fedlapja&#8223;</div>
+    </div>
+    <div class="kép_és_aláírás jobb_kep">
+        <img src="{% static 'img/bi_pi_tombstone.jpg' %}" alt="Bi-Pi sírja Kenyában" class="kep">
+        <div class="kép-aláírás">&#8222;Bi-Pi sírja kenyában&#8223;</div>
+    </div>
+
+    <div class="bal_jobb">
+        <div class="kép_és_aláírás">
+            <img src="{% static 'img/Scouting_for_boys.jpg' %}" alt="Scouting for Boys" class="kep cstöri">
+            <div class="kép-aláírás cstöri">&#8222;A cserkészet fiúknak c. könyv fedlapja&#8223;</div>
         </div>
-        
+        <div class="kép_és_aláírás">
+            <img src="{% static 'img/bi_pi_tombstone.jpg' %}" alt="Bi-Pi sírja Kenyában" class="kep cstöri">
+            <div class="kép-aláírás cstöri">&#8222;Bi-Pi sírja kenyában&#8223;</div>
+        </div>
     </div>
 </div>
-<div class="cst-be-3">
-    <div class="cst-cim">A cserkészliliom</div>
-    <div class="cst-be-3-torzs">
-        <div class="cst-img-kontener">
-            <img src="{% static 'img/magyar_cserkeszliliom.png' %}" alt="Magyar cserkészliliom" class="cst-be-3-img-1">
-        </div>
-        <div class="cst-be-3-torzs-a">
+
+
+
+
+<div class="három-hasáb">
+    <div class="h-közép">
+        <div class="oldal-alcím">A cserkészliliom</div>
+        <div class="szoveg">
             Az alapító (Bi-Pi) választotta a liliomot, mint a cserkészek jelképe. Ennek több oka is van, a liliom már a régi időkben is a tisztaságot 
             szimbolizálta, amit a cserkészek legfontosabb erényeként tartott. Ezen felül a térképeken az észeki irányt jelölték liliommal, 
             ami segítette az utazokat a helyes irány megtalálásában, ezzel vonta párhuzamba a jelvényt, hogy segítse a cserkészeket. 
             A stilizált liliom három ága, pedig a cserkészfogadalom három részére utal: kötelességteljesítés, segítőkészség, törvénytisztelet.
         </div>
-        
-        <div class="cst-img-kontener">
-            <img src="{% static 'img/scoutlily.webp' %}" alt="Nemzetközi cserkészliliom" class="cst-be-3-img-2">
+    </div>
+
+    <div class="kép_és_aláírás bal_kep">
+        <img src="{% static 'img/magyar_cserkeszliliom.png' %}" alt="Magyar cserkészliliom" class="kep">
+        <div class="kép-aláírás">&#8222;Magyar Cserkészliliom&#8223;</div>
+    </div>
+    <div class="kép_és_aláírás jobb_kep">
+        <img src="{% static 'img/scoutlily.webp' %}" alt="Nemzetközi cserkészliliom" class="kep">
+        <div class="kép-aláírás">&#8222;Nemzetközi Cserkészliliom&#8223;</div>
+    </div>
+
+    <div class="bal_jobb">
+        <div class="kép_és_aláírás">
+            <img src="{% static 'img/magyar_cserkeszliliom.png' %}" alt="Magyar cserkészliliom" class="kep cstöri">
+            <div class="kép-aláírás cstöri">&#8222;Magyar Cserkészliliom&#8223;</div>
+        </div>
+        <div class="kép_és_aláírás">
+            <img src="{% static 'img/scoutlily.webp' %}" alt="Nemzetközi cserkészliliom" class="kep cstöri">
+            <div class="kép-aláírás cstöri">&#8222;Nemzetközi Cserkészliliom&#8223;</div>
         </div>
     </div>
 </div>
+
 
 {% endblock content%}

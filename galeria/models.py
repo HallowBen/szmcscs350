@@ -5,6 +5,8 @@ import os
 import cv2
 from django.conf import settings
 
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 from django.template.defaultfilters import slugify
 
@@ -17,8 +19,8 @@ import time, datetime
 def content_file_name(instance, filename):
     fname,ext = filename.split('.')
     newfname= "%s.%s" % ( str(slugify(fname)), ext)
-    current_d=datetime.date.today()
-    str_current_d=current_d.strftime("%Y_%m_%d")
+    # current_d=datetime.date.today()
+    # str_current_d=current_d.strftime("%Y_%m_%d")
     return os.path.join('galeria/',instance.esemeny.esemeny_key, newfname)
 
 
@@ -114,8 +116,9 @@ class Theme(models.Model):
     boritokep = models.ImageField(
          upload_to='galleria_temakor/',
         default=0, 
-        
     )
+
+    boritokep_preview= ImageSpecField(processors=[ResizeToFill(220, 220)], source='boritokep',format='JPEG', options={'quality': 60})
 
     date = models.DateField( auto_now_add=True )
 
@@ -135,7 +138,7 @@ class Theme(models.Model):
         fullpath = os.path.abspath(os.path.join(settings.MEDIA_ROOT, self.boritokep.name))
         rotate_image(fullpath)
         resize(1200,fullpath, 'ratio')
-        convertImage(fullpath)
+        # convertImage(fullpath)
 
     
 
@@ -204,6 +207,7 @@ class Photos(models.Model):
         upload_to=content_file_name,
         default=0
         )
+    preview= ImageSpecField(processors=[ResizeToFill(220, 220)], source='kepek',format='JPEG', options={'quality': 60})
     
     date= models.DateField( auto_now_add=True )
 
@@ -224,5 +228,5 @@ def update_image(sender, instance, **kwargs):
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     fullpath = BASE_DIR + instance.kepek.url
     rotate_image(fullpath)
-    # resize(1200, fullpath, "ratio")
-    # convertImage(fullpath)
+    resize(1200, fullpath, "ratio")
+    convertImage(fullpath)

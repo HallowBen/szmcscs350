@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.min.css" integrity="sha512-TdCx5ObKpq3+lwUdiXFgFLhqwTB98YsdaQWSJrwkOz084qaeO86+NMYfU/pnpPo1pDVah0a7yvFmbcvI8ZiGAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe-lightbox.esm.min.js" integrity="sha512-zjCROZCPldqAgXBFBf/GVlmWgfiMLRZ97Kd3rpKySugD1xjGqj2UfAcZb4hyGnOsyeGsFDKuHx9+mp/99hsvIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js" integrity="sha512-aCgDFYcFZ/FAd/yjE3VRUb+hbDbGMG2WRxWG0VPmr8VtWWCPpmOdJgu6/xkU8v8qlMgr9ARQ5Dat+aroaESJJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="g_container">
+    <div class="g-cim">
+        <h1 class="gallery-title">Szent Márton cserkészcsapat</h1><br>
+        <h2 class="gallery-subtitle">Galéria</h2><h3 class="gallery-subtitle2">{{tema.temakor}}</h3><h4 class="subtitle3">{{esemeny.esemeny}}</h4><br>
+        <div><a href="{% url 'galeria' %}">Galéria</a>/<a href="{% url 'esemeny' tema.theme_key %}">{{tema.temakor}}</a>/{{esemeny.esemeny}}</div>
+    </div>
+
+<div class="gallery_all_content">
+   <div class="pswp-gallery all_img_container" id="Gallery">
+      {% for img in kepek%}
+      <a href="{{img.kepek.url}}" class="g_all_img_link" {% if img.kepek.width < img.kepek.height %} data-pswp-width="1900" data-pswp-height="2500" {% elif img.kepek.width == img.kepek.height %} data-pswp-width="600" data-pswp-height="600" {% else %} data-pswp-width="2500" data-pswp-height="1800" {%endif%} target="_blank">
+        <img src="{{img.kepek.url}}" class="g_all_img">
+      </a>
+      {% endfor %}
+    </div>
+    <div class="gallery_videos">
+      {% for obj in videok %}
+      <div class="gvideo_container">
+        <video width="100%" src="{{obj.video.url}}" type="video/{{obj.type}}" controls height="100%" class="gallaery_video" >
+      </div>
+      </video>  
+      {% endfor %}
+    </div>
+</div>
+
+</div>
+       
+<script type=module>
+      import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe-lightbox.esm.min.js';
+      import PhotoSwipe from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js';
+        const options= {
+        bgOpacity: .9,
+        gallery: '#Gallery',
+        children: 'a',
+        pswpModule: PhotoSwipe
+      };
+
+      const lightbox = new PhotoSwipeLightbox(options);
+      const fullscreenAPI = getFullscreenAPI();
+      const fullscreenSVG = '<svg aria-hidden="true" class="pswp__icn" viewBox="0 0 32 32" width="32" height="32"><use class="pswp__icn-shadow" xlink:href="#pswp__icn-fullscreen-exit"/><use class="pswp__icn-shadow" xlink:href="#pswp__icn-fullscreen-request"/><path d="M8 8v6.047h2.834v-3.213h3.213V8h-3.213zm9.953 0v2.834h3.213v3.213H24V8h-2.834zM8 17.953V24h6.047v-2.834h-3.213v-3.213zm13.166 0v3.213h-3.213V24H24v-6.047z" id="pswp__icn-fullscreen-request"/><path d="M11.213 8v3.213H8v2.834h6.047V8zm6.74 0v6.047H24v-2.834h-3.213V8zM8 17.953v2.834h3.213V24h2.834v-6.047h-2.834zm9.953 0V24h2.834v-3.213H24v-2.834h-3.213z" id="pswp__icn-fullscreen-exit" style="display:none"/></svg>';
+
+
+lightbox.on('uiRegister', function() {
+  lightbox.pswp.ui.registerElement({
+    name: 'fullscreen-button',
+    title: 'Toggle fullscreen',
+    order: 9,
+    isButton: true,
+    html: fullscreenSVG,
+    onClick: (event, el) => {
+      toggleFullscreen();
+    }
+  });
+});
+lightbox.on('close', () => {
+  if (fullscreenAPI && fullscreenAPI.isFullscreen()) {
+    fullscreenAPI.exit();
+  }
+});
+
+lightbox.init();
+function getFullscreenAPI() {
+  let api;
+  let enterFS;
+  let exitFS;
+  let elementFS;
+  let changeEvent;
+  let errorEvent;
+  if (document.documentElement.requestFullscreen) {
+    enterFS = 'requestFullscreen';
+    exitFS = 'exitFullscreen';
+    elementFS = 'fullscreenElement';
+    changeEvent = 'fullscreenchange';
+    errorEvent = 'fullscreenerror';
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    enterFS = 'webkitRequestFullscreen';
+    exitFS = 'webkitExitFullscreen';
+    elementFS = 'webkitFullscreenElement';
+    changeEvent = 'webkitfullscreenchange';
+    errorEvent = 'webkitfullscreenerror';
+  }
+  if (enterFS) {
+    api = {
+      request: function (el) {
+        if (enterFS === 'webkitRequestFullscreen') {
+          el[enterFS](Element.ALLOW_KEYBOARD_INPUT);
+        } else {
+          el[enterFS]();
+        }
+      },
+      exit: function () {
+        return document[exitFS]();
+      },
+      isFullscreen: function () {
+        return document[elementFS];
+      },
+      change: changeEvent,
+      error: errorEvent
+    };
+  }
+  return api;
+};
+function toggleFullscreen() {
+  if (fullscreenAPI) {
+    if (fullscreenAPI.isFullscreen()) {
+      fullscreenAPI.exit();
+      setTimeout(function() {
+        document.getElementById('pswp__icn-fullscreen-exit').style.display = 'none';
+        document.getElementById('pswp__icn-fullscreen-request').style.display = 'inline';
+      }, 300);
+    } else {
+      fullscreenAPI.request(document.querySelector(`.pswp`));
+      setTimeout(function() {
+        document.getElementById('pswp__icn-fullscreen-exit').style.display = 'inline';
+        document.getElementById('pswp__icn-fullscreen-request').style.display = 'none';
+      }, 300);
+    }
+  }
+}
+          </script>
+{% endblock %}
