@@ -26,10 +26,11 @@ sitemaps = {
 }
     
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('szmcscs_secure_login/', admin.site.urls),
     path('', include('home.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     re_path(r'^robots\.txt', include('robots.urls')),
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
     path('galeria/', include('galeria.urls')),
     path('captcha', include('captcha.urls')),
     path('segedanyagok/', include('csapat.urls')),

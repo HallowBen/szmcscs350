@@ -21,13 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-lw8zcm^0ts(s9pg%@6k8axf3duz3ql!$c)luref2yig!=9qe6$'
+SECRET_KEY = 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCsqKp+XsjM2izJedLxPYOECsKOVoGQ1v/APMumkygnga94WpnuCMWx+HV5e11GSy6gmw5PCtbpy8qF7rslehCseFDoJR0OmdWcYe+0tOmCxBe4/WnIBEJlbJEr6Ot4Xv3nVY8we+NCIuT9bUHstWa4v5EgAsiDWiNZQpufbQu5x9bTdxoePFl4upf681HhpiHxhAuVoML+A+6aA1bvrjTqs9Uei26gSOYFbTw5QIrD181kU7ATXbO3iEjICDylyYK4DHysIPp7iduuaMV5p0xqHp6FNLHFMSYCTYjble/UKgtQprkzNZPS9idr6l3fN9loEKb304JRPHmfp17QCmhT/AAAAB3NzaC1yc2EAAAADAQABAAABAQCOkLl83PBbWuWUHFSy/6l9cqfpl9hTE23CZ4shio0Ie8yTx1XYd+oMYm/UAx8q7DvDxtJSvuLpZXuIQvqp8eDoPiWIelTR4IutOhWrNmemJm8cmwoq5rEWRKNzkCe6S1xNqLCCmxqylIWMYwFYqR4QXB/e0Wx3YYcg8sSP//YMbty+TmxgRevZErkKUuYVOWQ67Ba9bGMHXpQbp9+xUBb3mjQzR8lCYgl8He8qzIbcAEDXCXoHqShIzXIPRe1xp1lQ9s6LnFge1GsBghD+Zl6chO82p1eye6OdKhQuJnG5GijajZ0H3KP1IWFcvJ4HzIFUKB3L4qPu8yloDs2Ceqvh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+PREPEND_WWW = True
+BASE_URL = "https://www.szmcscs350.hu"
+ALLOWED_HOSTS = ['www.szmcscs350.hu','szmcscs350.hu']
 
 # Application definition
 
@@ -158,7 +159,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #scurity stuff
 SECURE_BROWSER_XSS_FILTER=True
-SECURE_CONTENT_TYPE_NOSNIFF=False
+SECURE_CONTENT_TYPE_NOSNIFF=True
 
 
 import mimetypes
